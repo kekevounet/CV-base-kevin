@@ -1,0 +1,98 @@
+import { motion } from 'framer-motion'
+import Kevin from '../../Assets/Kevin.JPG'
+import { Link } from 'react-router-dom'
+function Accueil () {
+  // Etat
+  const TextAcceuil = { scale: 0 }
+  //Comportement
+
+  //Affichage
+  return (
+    <div
+      className='flex items-center justify-center w-full h-full text-sm text-white lg:h-screen bg-slate-900 lg:text-base'
+      id='Accueil'
+    >
+      <div className='flex flex-col-reverse items-center justify-between w-full p-2 lg:p-3 h-2/3 lg:flex-row'>
+        {/* eto le contenu voalohany */}
+        <motion.div
+          className='items-center justify-center w-full h-auto p-3 border-b border-double lg:ml-10 lg:w-1/2 lg:h-full'
+          initial={TextAcceuil}
+          animate={{ scale: 1, transition: { duration: 0.5, delay: 3.5 } }}
+          dragConstraints={{ top: 0, bottom: 0, right: 0, left: 0 }}
+          drag
+          dragElastic={1.1}
+        >
+          <div className='flex flex-col items-center justify-center h-full'>
+            <div className='text-center'>
+              MAMINIRINA Niavo <ins className='underline-offset-4'>Kevin</ins>
+            </div>
+            <hr />
+            <div className='text-center'>niavo.kevin9@gmail.com</div>
+            <div className='text-center'>038 94 233 51</div>
+            <hr />
+            <div className='p-2 text-center'>
+              Je suis actuellement à la recherche d'un stage ou d'une
+              opportunité d'embauche pour développer d’avantage mes compétences
+              techniques, tout en apportant mon expertise dans un environnement
+              dynamique.
+            </div>
+
+            <div className='flex flex-row justify-around w-full mt-5'>
+              <motion.a
+                className='w-[40%] bg-slate-800 p-3 text-center border-b rounded-lg animate-bounce text-white no-underline hover:bg-slate-700'
+                whileTap={{ scale: 0.5 }}
+                title='niavo.kevin9@gmail.com'
+                href='maito:niavo.kevin9@gmail.com'
+                rel='noopener noreferrer'
+              >
+                <i className='mr-5 fas fa-envelope'></i>
+                Contactez-moi
+              </motion.a>
+              <motion.div
+                className='w-[40%] bg-slate-800 p-3 text-center border-b rounded-lg hover:bg-slate-700'
+                whileTap={{ scale: 0.5 }}
+                title='Niavo Kevin'
+              >
+                <i className='mr-4 fas fa-address-card'></i>
+                <Link to='Kevin' className='w-full p-3 text-white no-underline'>
+                  Voir mon CV
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* eto le contenu faharoany */}
+        <motion.div
+          className='flex items-center justify-center w-full mt-10 lg:w-1/2 lg:h-full h-96'
+          initial={TextAcceuil}
+          animate={{ scale: 1, transition: { duration: 0.5, delay: 4 } }}
+        >
+          <div
+            className='bg-slate-900 w-[80%] h-[280px] lg:rounded-full lg:w-[55%] lg:h-[80%] overflow-hidden flex justify-center items-center object-cover border-l border-t border-r border-b'
+            style={{ boxShadow: '0px 10px 10px -5px rgba(255,255,255,0.75)' }}
+          >
+            <motion.img
+              src={Kevin}
+              alt='Kevin'
+              className='lg:rounded-full'
+              title='Niavo Kevin'
+              dragConstraints={{ top: 0, bottom: 0, right: 0, left: 0 }}
+              drag
+              dragElastic={1.1}
+            >
+  
+            </motion.img>
+          </div>
+        </motion.div>
+      </div>
+      {/* <div
+      className='bg-black w-[70%] h-1/2 rounded-full lg:w-[28%] lg:h-[80%] overflow-hidden p-5 flex justify-center items-center object-contain border-l border-t border-r border-b'
+      style={{ boxShadow: '0px 10px 10px -5px rgba(255,255,255,0.75)' }}
+      >
+      Sariko no eto
+      </div> */}
+    </div>
+  )
+}
+export default Accueil
