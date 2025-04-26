@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
-import tache from '../../Assets/tache.png'
-import statique from '../../Assets/static.png'
+import { motion } from 'framer-motion';
+import tache from '../../Assets/tache.png';
+import statique from '../../Assets/static.png';
+import service from '../../Assets/service.png';
 function Projets () {
   return (
     <div
@@ -15,25 +16,40 @@ function Projets () {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <a href='https://gestion-de-tache.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline'>
+          <a href='https://gestion-de-tache.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline' title='Simple gestion de tâche'>
             <img src={tache} alt='me' className='w-full h-60' />
             <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
-              Gestion de tâche
+              Simple gestion de tâche
             </div>
           </a>
         </motion.div>
 
-        {/* Projet voalohany */}
+        {/* Projet faharoa */}
         <motion.div
           className=''
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <a href='https://niavo.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline'>
+          <a href='https://niavo.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline' title='site statique'>
             <img src={statique} alt='me' className='w-full h-60' />
             <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
               Site statique
+            </div>
+          </a>
+        </motion.div>
+
+        {/* Projet fahatelo */}
+        <motion.div
+          className=''
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <a href='https://still-service.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline' title="Vous voulez avoir une autre comme celui là? ha">
+            <img src={service} alt='me' className='w-full h-60' />
+            <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
+              Mora ny trondro ee
             </div>
           </a>
         </motion.div>
@@ -43,4 +59,4 @@ function Projets () {
     </div>
   )
 }
-export default Projets
+export default Projets;
