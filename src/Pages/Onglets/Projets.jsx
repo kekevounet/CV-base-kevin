@@ -15,7 +15,7 @@ function Projets () {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <a href='https://gestion-de-tache.netlify.app/' className='text-white no-underline'>
+          <a href='https://gestion-de-tache.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline'>
             <img src={tache} alt='me' className='w-full h-60' />
             <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
               Gestion de tâche
@@ -30,7 +30,7 @@ function Projets () {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <a href='https://niavo.netlify.app/' className='text-white no-underline'>
+          <a href='https://niavo.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline'>
             <img src={statique} alt='me' className='w-full h-60' />
             <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
               Site statique

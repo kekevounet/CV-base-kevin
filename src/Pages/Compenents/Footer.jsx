@@ -43,7 +43,7 @@ function Footer () {
                 Projets
               </li>
             </a>
-            <a href='mailto:niavo.kevin9@gmail.com' rel='noopener noreferrer' className='text-white no-underline transition-all' title='niavo.kevin9@gmail.com'>
+            <a href='mailto:niavo.kevin9@gmail.com' target='_blank' rel='noopener noreferrer' className='text-white no-underline transition-all' title='niavo.kevin9@gmail.com'>
               <li className='p-1'>
                 <span className='mr-3'>
                   <i className='p-1 rounded-full fas fa-envelope'></i>

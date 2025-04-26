@@ -43,6 +43,7 @@ function Accueil () {
                 whileTap={{ scale: 0.5 }}
                 title='niavo.kevin9@gmail.com'
                 href='maito:niavo.kevin9@gmail.com'
+                target='_blank'
                 rel='noopener noreferrer'
               >
                 <i className='mr-5 fas fa-envelope'></i>
