@@ -54,6 +54,21 @@ function Projets () {
           </a>
         </motion.div>
 
+        {/* Projet fahaefatra */}
+        <motion.div
+          className=''
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <a href='#Projets' className='text-white no-underline' title="En cours">
+            <img src='' alt='Gestion de stock en React et Express Js en cours' className='flex items-center justify-center w-full border h-60 border-whit' />
+            <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
+            Working project <span><i className="ml-5 text-base fas fa-gear animate-spin"></i></span>
+            </div>
+          </a>
+        </motion.div>
+
 
       </div>
     </div>

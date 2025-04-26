@@ -1,10 +1,26 @@
 import { motion } from 'framer-motion'
 import Kevin from '../../Assets/Kevin.JPG'
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
 function Accueil () {
   // Etat
   const TextAcceuil = { scale: 0 }
+  const [Chargement, setChargement] = useState(true);
   //Comportement
+  useEffect(() => {
+    
+    setTimeout(() => {
+      setChargement(false);
+    }, 3000);
+  }, []);
+
+  if (Chargement) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-slate-900">
+        <div className="w-32 h-32 border-t-2 border-b-2 border-white rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   //Affichage
   return (
@@ -54,8 +70,8 @@ function Accueil () {
                 whileTap={{ scale: 0.5 }}
                 title='Niavo Kevin'
               >
-                <i className='mr-4 fas fa-address-card'></i>
-                <Link to='Kevin' className='w-full p-3 text-white no-underline'>
+                <i className='mr-5 fas fa-address-card'></i>
+                <Link to='Kevin' className='w-full p-2 text-white no-underline'>
                   Voir mon CV
                 </Link>
               </motion.div>

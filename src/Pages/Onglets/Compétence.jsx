@@ -21,7 +21,7 @@ function Competences () {
 
           <div className='grid h-[90%] mt-3 grid-cols-2 gap-3'>
             <div className='w-full h-full p-3 border-b'>
-              <div className='p-2 text-center underline underline-offset-8'>
+              <div className='p-2 text-center underline underline-offset-4'>
                 Développement web
               </div>
               <div className='mt-3'>
@@ -36,7 +36,7 @@ function Competences () {
             </div>
 
             <div className='w-full h-full p-3 border-b'>
-              <div className='p-2 text-center underline underline-offset-8'>
+              <div className='p-2 text-center underline underline-offset-4'>
                 Développement logiciel
               </div>
               <div className='mt-3'>
@@ -48,7 +48,7 @@ function Competences () {
             </div>
 
             <div className='w-full h-full p-3'>
-              <div className='p-2 text-center underline underline-offset-8'>
+              <div className='p-2 text-center underline underline-offset-4'>
                 Autres
               </div>
               <div className='mt-3'>
@@ -60,7 +60,7 @@ function Competences () {
             </div>
 
             <div className='w-full h-full p-3'>
-              <div className='p-2 text-center underline underline-offset-8'>
+              <div className='p-2 text-center underline underline-offset-4'>
                 Soft skills
               </div>
               <div className='mt-3'>

@@ -23,15 +23,15 @@ function Experience () {
             </span>
           </div>
           <div className='p-3'>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Conception et développement d'un site catalogue interactif pour
               Trilogy, avec une interface utilisateur intuitive.
             </li>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Intégration de fonctionnalités de recherche et de filtrage
               avancées pour une navigation optimale.
             </li>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Utilisation de technologies modernes pour garantir la performance
               du site.
             </li>
@@ -45,16 +45,16 @@ function Experience () {
             </span>
           </div>
           <div className='p-3'>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Conception et développement d'une plateforme de gestion des
               intrants scolaires pour le Ministère de l'Éducation Nationale
               (MEN).
             </li>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Intégration de fonctionnalités de recherche et de filtrage
               avancées pour une navigation optimale.
             </li>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Optimisation de l'interface utilisateur pour une utilisation
               simplifiée par les agents du MEN.
             </li>
@@ -68,15 +68,15 @@ function Experience () {
             </span>
           </div>
           <div className='p-3'>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Découverte du fonctionnement interne de l'entreprise et des
               processus opérationnels.
             </li>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Observation des pratiques professionnelles en développement et
               gestion de projets.
             </li>
-            <li className='text-sm list-none lg:text-base'>
+            <li className='text-sm lg:text-base'>
               Participation à des réunions d'équipe et analyse des méthodes de
               travail.
             </li>
