@@ -49,7 +49,7 @@ function Projets () {
           <a href='https://still-service.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline' title="Vous voulez avoir une autre comme celui là? ha">
             <img src={service} alt='me' className='w-full h-60' />
             <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
-              Mora ny trondro ee
+              Still service
             </div>
           </a>
         </motion.div>

@@ -78,7 +78,7 @@ function NavBar () {
               title='Accueil'
               onClick={() => {
                 if (isMobile) {
-                  setNavBarOuvert(false) // ou !NavBar si tu veux toggle
+                  setNavBarOuvert(false)
                 }
               }}
             >
@@ -98,7 +98,7 @@ function NavBar () {
               title='Compétences'
               onClick={() => {
                 if (isMobile) {
-                  setNavBarOuvert(false) // ou !NavBar si tu veux toggle
+                  setNavBarOuvert(false)
                 }
               }}
             >
@@ -121,7 +121,7 @@ function NavBar () {
               title='Expériences'
               onClick={() => {
                 if (isMobile) {
-                  setNavBarOuvert(false) // ou !NavBar si tu veux toggle
+                  setNavBarOuvert(false)
                 }
               }}
             >
@@ -141,7 +141,7 @@ function NavBar () {
               title='Projets'
               onClick={() => {
                 if (isMobile) {
-                  setNavBarOuvert(false) // ou !NavBar si tu veux toggle
+                  setNavBarOuvert(false)
                 }
               }}
             >

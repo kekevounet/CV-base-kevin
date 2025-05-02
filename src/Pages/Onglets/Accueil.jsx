@@ -63,7 +63,7 @@ function Accueil () {
                 href='mailto:niavo.kevin9@gmail.com' target='_blank' rel='noopener noreferrer'
               >
                 <i className='mr-5 fas fa-envelope'></i>
-                Contactez-moi ee
+                Contactez-moi
               </motion.a>
               <motion.div
                 className='w-[40%] bg-stone-900 bg-opacity-90 p-3 text-center border-b rounded-lg hover:bg-stone-800'

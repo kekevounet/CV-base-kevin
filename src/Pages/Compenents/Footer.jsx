@@ -54,7 +54,7 @@ function Footer () {
           </ul>
         </div>
         <div className='flex items-center justify-center w-full h-full col-span-3 sm:col-span-1'>
-          <img src={me_info} alt='me_info' className='w-48 h-52 scale-[0.8]' title='Scanner-moi!!' />
+          <a rel='noopener noreferrer' href='mailto:niavo.kevin9@gmail.com'><img src={me_info} alt='me_info' className='w-48 h-52 scale-[0.8]' title='Scanner-moi!!' /></a>
         </div>
       </footer>
         <footer className='flex items-center justify-center w-full h-auto gap-2 p-3 text-base text-white border-t bg-stone-900 bg-opacity-90'>
