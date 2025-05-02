@@ -1,12 +1,14 @@
-import { motion } from 'framer-motion'
-import Kevin from '../../Assets/Kevin.JPG'
-import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
+import Kevin from '../../Assets/Kevin.JPG';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 function Accueil () {
   // Etat
   const TextAcceuil = { scale: 0 }
   const [Chargement, setChargement] = useState(true);
+
   //Comportement
+
   useEffect(() => {
     
     setTimeout(() => {
@@ -16,7 +18,7 @@ function Accueil () {
 
   if (Chargement) {
     return (
-      <div className="flex items-center justify-center h-screen bg-slate-900">
+      <div className="flex items-center justify-center h-screen bg-stone-700">
         <div className="w-32 h-32 border-t-2 border-b-2 border-white rounded-full animate-spin"></div>
       </div>
     );
@@ -25,7 +27,7 @@ function Accueil () {
   //Affichage
   return (
     <div
-      className='flex items-center justify-center w-full h-full text-sm text-white lg:h-screen bg-slate-900 lg:text-base'
+      className='flex items-center justify-center w-full h-full text-sm text-white bg-opacity-0 lg:h-screen lg:text-base '
       id='Accueil'
     >
       <div className='flex flex-col-reverse items-center justify-between w-full p-2 lg:p-3 h-2/3 lg:flex-row'>
@@ -35,8 +37,8 @@ function Accueil () {
           initial={TextAcceuil}
           animate={{ scale: 1, transition: { duration: 0.5, delay: 3.5 } }}
           dragConstraints={{ top: 0, bottom: 0, right: 0, left: 0 }}
-          drag
-          dragElastic={1.1}
+          // drag
+          // dragElastic={1.1}
         >
           <div className='flex flex-col items-center justify-center h-full'>
             <div className='text-center'>
@@ -55,18 +57,16 @@ function Accueil () {
 
             <div className='flex flex-row justify-around w-full mt-5'>
               <motion.a
-                className='w-[40%] bg-slate-800 p-3 text-center border-b rounded-lg animate-bounce text-white no-underline hover:bg-slate-700'
+                className='w-[40%] bg-stone-900 bg-opacity-90 p-3 text-center border-b rounded-lg animate-bounce text-white no-underline hover:bg-stone-800'
                 whileTap={{ scale: 0.5 }}
                 title='niavo.kevin9@gmail.com'
-                href='maito:niavo.kevin9@gmail.com'
-                target='_blank'
-                rel='noopener noreferrer'
+                href='mailto:niavo.kevin9@gmail.com' target='_blank' rel='noopener noreferrer'
               >
                 <i className='mr-5 fas fa-envelope'></i>
-                Contactez-moi
+                Contactez-moi ee
               </motion.a>
               <motion.div
-                className='w-[40%] bg-slate-800 p-3 text-center border-b rounded-lg hover:bg-slate-700'
+                className='w-[40%] bg-stone-900 bg-opacity-90 p-3 text-center border-b rounded-lg hover:bg-stone-800'
                 whileTap={{ scale: 0.5 }}
                 title='Niavo Kevin'
               >
@@ -86,7 +86,8 @@ function Accueil () {
           animate={{ scale: 1, transition: { duration: 0.5, delay: 4 } }}
         >
           <div
-            className='bg-slate-900 w-[80%] h-[280px] lg:rounded-full lg:w-[55%] lg:h-[80%] overflow-hidden flex justify-center items-center object-cover border-l border-t border-r border-b'
+            className=' w-[80%] h-[280px] lg:rounded-full lg:w-[55%] lg:h-[80%] overflow-hidden flex justify-center items-center object-cover border-l border-t border-r border-b'
+            alt='mlskdjqslmkdfjqslmkdjfqslmkdfjqslmkmjdf'
             style={{ boxShadow: '0px 10px 10px -5px rgba(255,255,255,0.75)' }}
           >
             <motion.img

@@ -4,19 +4,19 @@ import exp from '../../Assets/exp.JPG'
 function Experience () {
   return (
     <div
-      className='flex items-center justify-center w-full h-full text-sm text-white lg:h-screen bg-slate-900 lg:text-sm'
+      className='flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-sm'
       id='Expériences'
     >
       <div className='flex flex-col w-full mx-2 mt-20 rounded-lg h-[60%] lg:mx-5 lg:flex-row lg:justify-between '>
         {/* eto daolo ny compétences */}
         <motion.div
-          className='w-full h-[100%] p-2 rounded-lg bg-slate-800 lg:h-full lg:p-5 lg:mr-10 lg:w-1/2 lg:ml-36 border-b border-white'
+          className='w-full h-[100%] p-2 rounded-lg bg-stone-900 bg-opacity-90 lg:h-full lg:p-5 lg:mr-10 lg:w-1/2 lg:ml-36 border-b border-white'
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
         >
           {/* Exp 1 */}
-          <div className='relative p-3 text-left border-t rounded-lg lg:text-center bg-slate-700'>
+          <div className='relative p-3 text-left border-t rounded-lg lg:text-center bg-stone-700 bg-opacity-90'>
             Préstataire - Trilogy distribution en django{' '}
             <span className='absolute right-5'>
               <i className='fas fa-hourglass'></i> En cours
@@ -38,7 +38,7 @@ function Experience () {
           </div>
 
           {/* Exp 2 */}
-          <div className='relative p-3 text-left border-t rounded-lg lg:text-center bg-slate-700'>
+          <div className='relative p-3 text-left border-t rounded-lg lg:text-center bg-stone-700 bg-opacity-90'>
             Stagiare - MEN EN PHP{' '}
             <span className='absolute right-5'>
               <i className='fas fa-hourglass-end'></i> Mai - Août 2024
@@ -61,7 +61,7 @@ function Experience () {
           </div>
 
           {/* Exp 3 */}
-          <div className='relative p-3 text-left border-t rounded-lg lg:text-center bg-slate-700'>
+          <div className='relative p-3 text-left border-t rounded-lg lg:text-center bg-stone-700 bg-opacity-90'>
             Stagiare - SUNRISE{' '}
             <span className='absolute right-5'>
               <i className='fas fa-hourglass-end'></i> Novembre 2023
@@ -90,7 +90,7 @@ function Experience () {
             alt='exp'
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1,delay:0.5 }}
             className='rounded-lg'
           ></motion.img>
         </div>

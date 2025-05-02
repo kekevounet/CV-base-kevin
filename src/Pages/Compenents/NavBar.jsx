@@ -1,31 +1,45 @@
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 function NavBar () {
   // Etat
-  const [NavBarOuvert, setNavBarOuvert] = useState(() => window.innerWidth >= 768)
-
+  const [NavBarOuvert, setNavBarOuvert] = useState(
+    () => window.innerWidth >= 768
+  )
   const AnimNavInitial = { translateY: '-180%' }
   const AnimNavLiInitial = { scale: 0.5 }
+  const isMobile = useIsMobile()
 
-  // Comportement
+  function useIsMobile () {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth < 768)
+      window.addEventListener('resize', handleResize)
+      return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    return isMobile;
+  }
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setNavBarOuvert(false);
+        setNavBarOuvert(false)
       }
-    };
+    }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+  // Comportement
+  
   // Affichage
   return (
     <motion.div
-      className={`fixed w-full bg-slate-900 flex items-center justify-between text-white overflow-hidden transition-all duration-500 top-0 bg-opacity-95 z-50
+      className={`fixed w-full flex items-center justify-between text-white overflow-hidden transition-all duration-500 top-0 z-50 test 
         ${NavBarOuvert ? 'h-1/2 lg:h-20' : ' h-20'}
         `}
       style={{ boxShadow: '0px 10px 10px -10px rgba(255,255,255,0.75)' }}
@@ -60,8 +74,13 @@ function NavBar () {
           >
             <a
               href='#Accueil'
-              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-slate-800 hover:border-b'
+              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-stone-700 hover:border-b'
               title='Accueil'
+              onClick={() => {
+                if (isMobile) {
+                  setNavBarOuvert(false) // ou !NavBar si tu veux toggle
+                }
+              }}
             >
               <i className='mr-3 fas fa-house-user'></i>
               Accueil
@@ -75,8 +94,13 @@ function NavBar () {
           >
             <a
               href='#Compétences'
-              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-slate-800 hover:border-b'
+              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-stone-700 hover:border-b'
               title='Compétences'
+              onClick={() => {
+                if (isMobile) {
+                  setNavBarOuvert(false) // ou !NavBar si tu veux toggle
+                }
+              }}
             >
               <i className='mr-3 fas fa-list-check'></i>
               Compétences
@@ -93,8 +117,13 @@ function NavBar () {
           >
             <a
               href='#Expériences'
-              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-slate-800 hover:border-b'
+              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-stone-700 hover:border-b'
               title='Expériences'
+              onClick={() => {
+                if (isMobile) {
+                  setNavBarOuvert(false) // ou !NavBar si tu veux toggle
+                }
+              }}
             >
               <i className='mr-3 fas fa-briefcase'></i>
               Expériences
@@ -108,8 +137,13 @@ function NavBar () {
           >
             <a
               href='#Projets'
-              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-slate-800 hover:border-b'
+              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-stone-700 hover:border-b'
               title='Projets'
+              onClick={() => {
+                if (isMobile) {
+                  setNavBarOuvert(false) // ou !NavBar si tu veux toggle
+                }
+              }}
             >
               <i className='mr-3 fas fa-code'></i>
               Projets
@@ -146,4 +180,4 @@ function NavBar () {
     </motion.div>
   )
 }
-export default NavBar
+export default NavBar;

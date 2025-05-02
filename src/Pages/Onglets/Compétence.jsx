@@ -3,14 +3,14 @@ import exp from '../../Assets/Full.JPG'
 function Competences () {
   return (
     <div
-      className='flex items-center justify-center w-full h-full text-sm text-white lg:h-screen bg-slate-900 lg:text-base'
+      className='flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-base'
       id='Compétences'
       title='Compétences ++'
     >
       <div className='flex flex-col w-full mx-2 mt-20 rounded-lg h-[60%] lg:mx-5 lg:flex-row lg:justify-between'>
         {/* eto daolo ny compétences */}
         <motion.div
-          className='w-full h-[100%] p-2 rounded-lg bg-slate-800 lg:h-full lg:p-5 lg:mr-10 lg:w-1/2 lg:ml-36 border-b'
+          className='w-full h-[100%] p-2 rounded-lg bg-stone-900 bg-opacity-90 lg:h-full lg:p-5 lg:mr-10 lg:w-1/2 lg:ml-36 border-b'
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -81,7 +81,7 @@ function Competences () {
             alt='exp'
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1}}
+            transition={{ duration: 1, delay:0.5}}
             className='rounded-lg'
           >
           </motion.img>
@@ -90,4 +90,4 @@ function Competences () {
     </div>
   )
 }
-export default Competences
+export default Competences;

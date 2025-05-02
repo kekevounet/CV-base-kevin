@@ -15,7 +15,7 @@ function App(){
 
   if (Chargement) {
     return (
-      <div className="flex items-center justify-center h-screen bg-slate-900">
+      <div className="flex items-center justify-center h-screen bg-stone-700">
         <div className="w-32 h-32 border-t-2 border-b-2 border-white rounded-full animate-spin"></div>
       </div>
     );

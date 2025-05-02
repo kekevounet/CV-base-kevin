@@ -6,7 +6,7 @@ import Experience from './Expérience';
 import Projets from './Projets';
 function Index () {
   return (
-    <div className='h-full w-full bg-black z-50'>
+    <div className='z-50 w-full h-full'>
       <NavBar />
       <Accueil />
       <Competences />

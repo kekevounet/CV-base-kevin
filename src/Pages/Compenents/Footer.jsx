@@ -2,9 +2,9 @@ import me_info from '../../Assets/me_info.png'
 function Footer () {
   return (
     <>
-      <footer className='grid w-full h-auto grid-cols-3 gap-2 text-sm text-white border-t lg:text-base bg-slate-900'>
+      <footer className='grid w-full h-auto grid-cols-3 gap-2 text-sm text-white border-t lg:text-base bg-stone-900 bg-opacity-90'>
         <div className='flex items-center justify-center w-full h-full col-span-3 sm:col-span-1'>
-          <div className='mx-6 text-center'>Je suis actuellement à la recherche d'un stage ou d'une
+          <div className='mx-6 my-3 text-center'>Je suis actuellement à la recherche d'un stage ou d'une
               opportunité d'embauche pour développer d’avantage mes compétences
               techniques, tout en apportant mon expertise dans un environnement
               dynamique. <br /> Contactez si vous avez besoin de moi.</div>
@@ -57,7 +57,7 @@ function Footer () {
           <img src={me_info} alt='me_info' className='w-48 h-52 scale-[0.8]' title='Scanner-moi!!' />
         </div>
       </footer>
-        <footer className='flex items-center justify-center w-full h-auto gap-2 p-3 text-base text-white border-t bg-slate-900'>
+        <footer className='flex items-center justify-center w-full h-auto gap-2 p-3 text-base text-white border-t bg-stone-900 bg-opacity-90'>
           &copy; 2025 Still Development. Tous droits réservés.
         </footer>
     </>
