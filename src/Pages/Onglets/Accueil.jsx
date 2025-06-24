@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import Kevin from '../../Assets/Kevin.JPG';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-function Accueil () {
+
+function Accueil ({NavBarOuvert}) {
   // Etat
   const TextAcceuil = { scale: 0 }
   const [Chargement, setChargement] = useState(true);
@@ -27,7 +28,7 @@ function Accueil () {
   //Affichage
   return (
     <div
-      className='flex items-center justify-center w-full h-full text-sm text-white bg-opacity-0 lg:h-screen lg:text-base '
+      className={`flex items-center justify-center w-full h-full text-sm text-white bg-opacity-0 lg:h-screen lg:text-base ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
       id='Accueil'
     >
       <div className='flex flex-col-reverse items-center justify-between w-full p-2 lg:p-3 h-2/3 lg:flex-row'>
@@ -40,8 +41,8 @@ function Accueil () {
           // drag
           // dragElastic={1.1}
         >
-          <div className='flex flex-col items-center justify-center h-full'>
-            <div className='text-center'>
+          <div className='flex flex-col items-center justify-center w-full h-full'>
+            <div className='text-lg text-center'>
               MAMINIRINA Niavo <ins className='underline-offset-4'>Kevin</ins>
             </div>
             <hr />
@@ -55,9 +56,9 @@ function Accueil () {
               dynamique.
             </div>
 
-            <div className='flex flex-row justify-around w-full mt-5'>
+            <div className='flex flex-row justify-around w-full mt-5 space-x-5'>
               <motion.a
-                className='w-[40%] bg-stone-900 bg-opacity-90 p-3 text-center border-b rounded-lg animate-bounce text-white no-underline hover:bg-stone-800'
+                className='w-full lg:w-[40%] p-3 text-center text-white no-underline border-b rounded-lg bg-stone-900 bg-opacity-90 animate-bounce hover:bg-stone-800'
                 whileTap={{ scale: 0.5 }}
                 title='niavo.kevin9@gmail.com'
                 href='mailto:niavo.kevin9@gmail.com' target='_blank' rel='noopener noreferrer'
@@ -66,7 +67,7 @@ function Accueil () {
                 Contactez-moi
               </motion.a>
               <motion.div
-                className='w-[40%] bg-stone-900 bg-opacity-90 p-3 text-center border-b rounded-lg hover:bg-stone-800'
+                className='w-full lg:w-[40%] p-3 text-center border-b rounded-lg bg-stone-900 bg-opacity-90 hover:bg-stone-800'
                 whileTap={{ scale: 0.5 }}
                 title='Niavo Kevin'
               >

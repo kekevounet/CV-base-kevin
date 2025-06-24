@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import exp from '../../Assets/exp.JPG'
 
-function Experience () {
+function Experience ({ NavBarOuvert }) {
   return (
     <div
-      className='flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-sm'
+      className={`flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-sm ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
       id='Expériences'
     >
       <div className='flex flex-col w-full mx-2 mt-20 rounded-lg h-[60%] lg:mx-5 lg:flex-row lg:justify-between '>

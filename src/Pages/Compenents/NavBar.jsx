@@ -1,31 +1,44 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-function NavBar () {
-  // Etat
-  const [NavBarOuvert, setNavBarOuvert] = useState(
-    () => window.innerWidth >= 768
-  )
-  const AnimNavInitial = { translateY: '-180%' }
-  const AnimNavLiInitial = { scale: 0.5 }
-  const isMobile = useIsMobile()
-
-  function useIsMobile () {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
-
-    useEffect(() => {
-      const handleResize = () => setIsMobile(window.innerWidth < 768)
-      window.addEventListener('resize', handleResize)
-      return () => window.removeEventListener('resize', handleResize)
-    }, [])
-
-    return isMobile;
-  }
+function useIsMobile () {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return isMobile;
+}
+
+function NavBar ({NavBarOuvert, setNavBarOuvert}) {
+
+  // Etat
+  const AnimNavInitial = { translateY: '-180%' }
+  const AnimNavLiInitial = { scale: 0.5 }
+  const isMobile = useIsMobile();
+
+  const NavLink = [
+    {name:'Accueil', icon:'fa-house-user'},
+    {name:'Compétences', icon:'fa-list-check'},
+    {name:'Expériences', icon:'fa-briefcase'},
+    {name:'Projets', icon:'fa-code'}
+  ];
+
+  
+  
+  // Comportement
+  useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setNavBarOuvert(false)
+      if (window.innerWidth < 768)
+      {
+        setNavBarOuvert(false);
+      }
+      else
+      {
+        setNavBarOuvert(true);
       }
     }
 
@@ -33,16 +46,14 @@ function NavBar () {
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [])
-  // Comportement
+  }, [setNavBarOuvert])
   
   // Affichage
   return (
     <motion.div
-      className={`fixed w-full flex items-center justify-between text-white overflow-hidden transition-all duration-500 top-0 z-50 test 
-        ${NavBarOuvert ? 'h-1/2 lg:h-20' : ' h-20'}
+      className={`fixed w-full flex-row flex items-center justify-between text-white overflow-hidden transition-all duration-500 top-0 z-50 shadow-[-6px_-6px_5px_11px_rgba(255,255,255,0.75)] test 
+        ${NavBarOuvert ? 'w-[50%] h-screen lg:h-20 lg:w-full' : ' h-20'}
         `}
-      style={{ boxShadow: '0px 10px 10px -10px rgba(255,255,255,0.75)' }}
       initial={AnimNavInitial}
       animate={{ translateY: 0, transition: { duration: 0.5 } }}
     >
@@ -62,93 +73,29 @@ function NavBar () {
 
       {/* items faharoa anatin'ilay Navigation barre */}
       {NavBarOuvert && (
-        <div className='flex flex-col items-center justify-around w-full lg:flex-row lg:w-1/2'>
-          <motion.li
+        <div className='flex flex-col items-center justify-center w-full space-x-2 h-1/3 lg:flex-row lg:w-1/2 lg:space-y-0'>
+          {NavLink.map(({name, icon})=>(
+            <motion.li
             className='my-3 text-lg font-bold list-none'
             initial={AnimNavInitial}
-            animate={{
-              translateY: 0,
-              transition: { duration: 0.5, delay: 1.5 }
-            }}
+            animate={{ translateY: 0, transition: { duration: 0.5, delay: 1.5 } }}
             whileTap={AnimNavLiInitial}
           >
             <a
-              href='#Accueil'
-              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-stone-700 hover:border-b'
-              title='Accueil'
+              href={`#${name}`}
+              className='p-4 text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b hover:shadow-[inset_0px_0px_5px_black]'
+              title={`${name}`}
               onClick={() => {
                 if (isMobile) {
                   setNavBarOuvert(false)
                 }
               }}
             >
-              <i className='mr-3 fas fa-house-user'></i>
-              Accueil
+              <i className={`mr-3 fa-solid ${icon}`}></i>
+              {name}
             </a>
           </motion.li>
-          <motion.li
-            className='my-3 text-lg font-bold list-none'
-            initial={AnimNavInitial}
-            animate={{ translateY: 0, transition: { duration: 0.5, delay: 2 } }}
-            whileTap={AnimNavLiInitial}
-          >
-            <a
-              href='#Compétences'
-              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-stone-700 hover:border-b'
-              title='Compétences'
-              onClick={() => {
-                if (isMobile) {
-                  setNavBarOuvert(false)
-                }
-              }}
-            >
-              <i className='mr-3 fas fa-list-check'></i>
-              Compétences
-            </a>
-          </motion.li>
-          <motion.li
-            className='my-3 text-lg font-bold list-none'
-            initial={AnimNavInitial}
-            animate={{
-              translateY: 0,
-              transition: { duration: 0.5, delay: 2.5 }
-            }}
-            whileTap={AnimNavLiInitial}
-          >
-            <a
-              href='#Expériences'
-              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-stone-700 hover:border-b'
-              title='Expériences'
-              onClick={() => {
-                if (isMobile) {
-                  setNavBarOuvert(false)
-                }
-              }}
-            >
-              <i className='mr-3 fas fa-briefcase'></i>
-              Expériences
-            </a>
-          </motion.li>
-          <motion.li
-            className='my-3 text-lg font-bold list-none'
-            initial={AnimNavInitial}
-            animate={{ translateY: 0, transition: { duration: 0.5, delay: 3 } }}
-            whileTap={AnimNavLiInitial}
-          >
-            <a
-              href='#Projets'
-              className='p-4 text-white no-underline transition-all duration-200 rounded-lg hover:bg-stone-700 hover:border-b'
-              title='Projets'
-              onClick={() => {
-                if (isMobile) {
-                  setNavBarOuvert(false)
-                }
-              }}
-            >
-              <i className='mr-3 fas fa-code'></i>
-              Projets
-            </a>
-          </motion.li>
+          ))}
         </div>
       )}
       {!NavBarOuvert && (
@@ -172,7 +119,7 @@ function NavBar () {
       ) : (
         <div className='absolute transition-all duration-500 cursor-pointer top-5 right-5 lg:hidden'>
           <i
-            className='text-5xl fas fa-bars-staggered'
+            className='text-5xl fas fa-bars'
             onClick={() => setNavBarOuvert(!NavBarOuvert)}
           ></i>
         </div>

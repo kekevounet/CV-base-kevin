@@ -1,9 +1,10 @@
-import { motion } from 'framer-motion'
-import exp from '../../Assets/Full.JPG'
-function Competences () {
+import { motion } from 'framer-motion';
+import exp from '../../Assets/Full.JPG';
+
+function Competences ({NavBarOuvert}) {
   return (
     <div
-      className='flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-base'
+      className={`flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-base ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' } `}
       id='Compétences'
       title='Compétences ++'
     >

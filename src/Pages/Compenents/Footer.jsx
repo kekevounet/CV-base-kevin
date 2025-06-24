@@ -1,8 +1,18 @@
-import me_info from '../../Assets/me_info.png'
-function Footer () {
+import me_info from '../../Assets/me_info.png';
+
+function Footer ({ NavBarOuvert }) {
+  // Etat
+  const FootLink = [
+    {name:'Accueil', icon:'fa-house-user'},
+    {name:'Compétences', icon:'fa-list-check'},
+    {name:'Expériences', icon:'fa-briefcase'},
+    {name:'Projets', icon:'fa-code'}
+  ];
+
+  // Affichage
   return (
     <>
-      <footer className='grid w-full h-auto grid-cols-3 gap-2 text-sm text-white border-t lg:text-base bg-stone-900 bg-opacity-90'>
+      <footer className={`grid w-full h-auto grid-cols-3 gap-2 text-sm text-white border-t lg:text-base bg-stone-900 bg-opacity-90 ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}>
         <div className='flex items-center justify-center w-full h-full col-span-3 sm:col-span-1'>
           <div className='mx-6 my-3 text-center'>Je suis actuellement à la recherche d'un stage ou d'une
               opportunité d'embauche pour développer d’avantage mes compétences
@@ -11,38 +21,16 @@ function Footer () {
         </div>
         <div className='flex items-center justify-center w-full h-full col-span-3 sm:col-span-1'>
           <ul>
-            <a href='#Accueil' className='text-white no-underline transition-all' title='Accueil'>
+            {FootLink.map(({name,icon})=>(
+              <a href={`#${name}`} className='text-white no-underline transition-all' title={`${name}`}>
               <li className='p-1'>
                 <span className='mr-3'>
-                  <i className='p-1 rounded-full fas fa-house-user'></i>
+                  <i className={`p-1 rounded-full fa-solid ${icon}`}></i>
                 </span>
-                Accueil
+                {name}
               </li>
-            </a>
-            <a href='#Compétences' className='text-white no-underline transition-all' title='Compétences'>
-              <li className='p-1'>
-                <span className='mr-3'>
-                  <i className='p-1 rounded-full fas fa-list-check'></i>
-                </span>
-                Compétences
-              </li>
-            </a>
-            <a href='#Expériences' className='text-white no-underline transition-all' title='Expériences'>
-              <li className='p-1'>
-                <span className='mr-3'>
-                  <i className='p-1 rounded-full fas fa-briefcase'></i>
-                </span>
-                Expériences
-              </li>
-            </a>
-            <a href='#Projets' className='text-white no-underline transition-all' title='Projets'>
-              <li className='p-1'>
-                <span className='mr-3'>
-                  <i className='p-1 rounded-full fas fa-code'></i>
-                </span>
-                Projets
-              </li>
-            </a>
+              </a>
+            ))}
             <a href='mailto:niavo.kevin9@gmail.com' target='_blank' rel='noopener noreferrer' className='text-white no-underline transition-all' title='niavo.kevin9@gmail.com'>
               <li className='p-1'>
                 <span className='mr-3'>
