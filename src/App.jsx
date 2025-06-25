@@ -1,8 +1,5 @@
-import { GiSpinningRibbons } from "react-icons/gi"; 
+
 import { GiSpinalCoil } from "react-icons/gi"; 
-import { GiSpinningBlades } from "react-icons/gi"; 
-import { ImSpinner10 } from "react-icons/im"; 
-import { ImSpinner5 } from "react-icons/im"; 
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Index from './Pages/Onglets/Index';
 import Kevin from './Pages/Onglets/Kevin';
