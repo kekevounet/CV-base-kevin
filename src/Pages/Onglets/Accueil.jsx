@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Kevin from '../../Assets/Kevin.JPG';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { GiSpinalCoil } from 'react-icons/gi';
 
 function Accueil ({NavBarOuvert}) {
   // Etat
@@ -20,7 +21,7 @@ function Accueil ({NavBarOuvert}) {
   if (Chargement) {
     return (
       <div className="flex items-center justify-center h-screen bg-stone-700">
-        <div className="w-32 h-32 border-t-2 border-b-2 border-white rounded-full animate-spin"></div>
+        <GiSpinalCoil className="text-white text-9xl animate-spin"/>
       </div>
     );
   }

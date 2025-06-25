@@ -5,6 +5,8 @@ import Accueil from './Accueil';
 import Competences from './Compétence';
 import Experience from './Expérience';
 import Projets from './Projets';
+import Transition from '../Compenents/Transition';
+
 function Index ()
 {
   // Etat
@@ -23,4 +25,4 @@ function Index ()
     </div>
   )
 }
-export default Index
+export default Transition(Index);

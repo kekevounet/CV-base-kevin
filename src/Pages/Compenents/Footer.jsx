@@ -22,7 +22,7 @@ function Footer ({ NavBarOuvert }) {
         <div className='flex items-center justify-center w-full h-full col-span-3 sm:col-span-1'>
           <ul>
             {FootLink.map(({name,icon})=>(
-              <a href={`#${name}`} className='text-white no-underline transition-all' title={`${name}`}>
+              <a href={`#${name}`} className='text-white no-underline transition-all' title={`${name}`} key={name}>
               <li className='p-1'>
                 <span className='mr-3'>
                   <i className={`p-1 rounded-full fa-solid ${icon}`}></i>

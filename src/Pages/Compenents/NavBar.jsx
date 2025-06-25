@@ -24,7 +24,7 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
     {name:'Accueil', icon:'fa-house-user'},
     {name:'Compétences', icon:'fa-list-check'},
     {name:'Expériences', icon:'fa-briefcase'},
-    {name:'Projets', icon:'fa-code'}
+    {name:'Projets', icon:'fa-laptop-code'}
   ];
 
   
@@ -51,8 +51,8 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
   // Affichage
   return (
     <motion.div
-      className={`fixed w-full flex-row flex items-center justify-between text-white overflow-hidden transition-all duration-500 top-0 z-50 shadow-[-6px_-6px_5px_11px_rgba(255,255,255,0.75)] test 
-        ${NavBarOuvert ? 'w-[50%] h-screen lg:h-20 lg:w-full' : ' h-20'}
+      className={`fixed flex-row flex items-center justify-between text-white overflow-hidden transition-all duration-500 top-0 z-40 shadow-[-6px_-6px_5px_11px_rgba(255,255,255,0.75)] test 
+        ${NavBarOuvert ? 'w-[50%] h-screen lg:h-20 lg:w-full ' : ' h-20 w-full'}
         `}
       initial={AnimNavInitial}
       animate={{ translateY: 0, transition: { duration: 0.5 } }}
@@ -75,15 +75,16 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
       {NavBarOuvert && (
         <div className='flex flex-col items-center justify-center w-full space-x-2 h-1/3 lg:flex-row lg:w-1/2 lg:space-y-0'>
           {NavLink.map(({name, icon})=>(
-            <motion.li
-            className='my-3 text-lg font-bold list-none'
-            initial={AnimNavInitial}
-            animate={{ translateY: 0, transition: { duration: 0.5, delay: 1.5 } }}
-            whileTap={AnimNavLiInitial}
-          >
+            <motion.li 
+              key={name}
+              className='my-3 text-lg font-bold list-none'
+              initial={AnimNavInitial}
+              animate={{ translateY: 0, transition: { duration: 0.5, delay: 1.5 } }}
+              whileTap={AnimNavLiInitial}
+            >
             <a
               href={`#${name}`}
-              className='p-4 text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b hover:shadow-[inset_0px_0px_5px_black]'
+              className='p-4 text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b hover:shadow-[inset_0px_0px_10px_rgb(50,50,50)]'
               title={`${name}`}
               onClick={() => {
                 if (isMobile) {
@@ -96,6 +97,26 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
             </a>
           </motion.li>
           ))}
+          <motion.li 
+              className='my-3 text-lg font-bold list-none'
+              initial={AnimNavInitial}
+              animate={{ translateY: 0, transition: { duration: 0.5, delay: 1.5 } }}
+              whileTap={AnimNavLiInitial}
+            >
+            <Link
+            to='/Terminal'
+              className='p-4 text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b hover:shadow-[inset_0px_0px_10px_rgb(50,50,50)]'
+              title={`Terminal`}
+              onClick={() => {
+                if (isMobile) {
+                  setNavBarOuvert(false)
+                }
+              }}
+            >
+              <i className={`mr-3 fa-solid fa-terminal`}></i>
+              Terminal
+            </Link>
+          </motion.li>
         </div>
       )}
       {!NavBarOuvert && (

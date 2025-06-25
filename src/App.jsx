@@ -1,10 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { GiSpinningRibbons } from "react-icons/gi"; 
+import { GiSpinalCoil } from "react-icons/gi"; 
+import { GiSpinningBlades } from "react-icons/gi"; 
+import { ImSpinner10 } from "react-icons/im"; 
+import { ImSpinner5 } from "react-icons/im"; 
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Index from './Pages/Onglets/Index';
 import Kevin from './Pages/Onglets/Kevin';
 import { useState,useEffect } from 'react';
+import Terminal from './Pages/Onglets/Terminal';
+import { AnimatePresence } from 'framer-motion';
+
 function App(){
   // Etat
   const [Chargement, setChargement] = useState(true);
+  const location = useLocation();
+
   // Comportement
   useEffect(() => {
     
@@ -16,17 +26,20 @@ function App(){
   if (Chargement) {
     return (
       <div className="flex items-center justify-center h-screen bg-stone-700">
-        <div className="w-32 h-32 border-t-2 border-b-2 border-white rounded-full animate-spin"></div>
+        <GiSpinalCoil className="text-white text-9xl animate-spin"/>
       </div>
     );
   }
   return(
-    <Router>
-      <Routes>
-        <Route path='/' element={<Index />} />
-        <Route path='Kevin' element={<Kevin />} />
-      </Routes>
-    </Router>
+    <>
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route path='/' element={<Index />} />
+          <Route path='Kevin' element={<Kevin />} />
+          <Route path='Terminal' element={<Terminal /> } />
+        </Routes>
+      </AnimatePresence>
+    </>
   )
 }
 export default App;
