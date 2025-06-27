@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import tache from '../../Assets/tache.png';
 import statique from '../../Assets/static.png';
 import service from '../../Assets/service.png';
+import standart from '../../Assets/standart.png';
 function Projets ({ NavBarOuvert }) {
   return (
     <div
@@ -55,6 +56,21 @@ function Projets ({ NavBarOuvert }) {
         </motion.div>
 
         {/* Projet fahaefatra */}
+        <motion.div
+          className=''
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <a href='https://stand-art.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline' title="Vous voulez avoir une autre comme celui là? ha">
+            <img src={standart} alt='me' className='w-full h-60' />
+            <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
+              Stand'art
+            </div>
+          </a>
+        </motion.div>
+
+        {/* Projet fahadimy */}
         <motion.div
           className=''
           initial={{ scale: 0, opacity: 0 }}

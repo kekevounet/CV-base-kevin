@@ -33,6 +33,7 @@ __   ___________________________________________________________________________
   const kevinPrompt = "Kevin:~$";
   const inputRef = useRef(null);
 
+
   useEffect(() => {
     inputRef.current?.focus();
   }, [history]);
@@ -49,6 +50,8 @@ __   ___________________________________________________________________________
   - help : Affiche cette aide
   - about : À propos de moi
   - service : Mes Services
+  - name : my name is...
+  - contact : Les moyens de me contactez facilement
   - clear : Efface l'écran`;
         break;
       case "about":
@@ -58,7 +61,13 @@ __   ___________________________________________________________________________
         response = "Sur ce plan, je peux créer des sites web responsives sur mesure, comme des sites vitrines, sites e-catalogue, ou une application web tout simplement. N'hésite pas à me contacter.";
         break;
       case "name":
-        response = `${history}`;
+        response = `MAMINIRINA Niavo kevin`;
+        break;
+      case "contact":
+        response = 'niavo.kevin9@gmail.com / whatsapp || tel: 038 94 233 51 / 🔍: Niavo Kevin'
+        break;
+      case "secret":
+        response = 'hahaha, je t\'ai bien eu, y a pas de secret pour le moment leretsy an';
         break;
       case "clear":
         setHistory([]);
@@ -86,11 +95,11 @@ Tapez \`help\` pour la liste des commandes.`;
           </div>
 
           {/* Output zone */}
-          <div className="flex-1 p-4 space-y-3 overflow-auto font-mono text-sm bg-black lg:text-base">
+          <div className="flex-1 p-4 space-y-3 overflow-auto font-mono text-sm bg-black lg:overflow-hidden lg:text-base">
             {history.map((line, index) => (
-              <pre key={index} className="overflow-x-auto leading-relaxed break-words break-all whitespace-pre-wrap">
-                {line}
-              </pre>
+              <div key={index} className="max-w-full overflow-x-auto scrollbar-hide">
+                <pre className="font-mono leading-relaxed whitespace-pre">{line}</pre>
+              </div>
             ))}
             <div className="flex items-center mt-2 space-x-2">
               <span className="font-bold">{kevinPrompt}</span>

@@ -77,7 +77,7 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
           {NavLink.map(({name, icon})=>(
             <motion.li 
               key={name}
-              className='my-3 text-lg font-bold list-none'
+              className='my-3 font-bold list-none'
               initial={AnimNavInitial}
               animate={{ translateY: 0, transition: { duration: 0.5, delay: 1.5 } }}
               whileTap={AnimNavLiInitial}
