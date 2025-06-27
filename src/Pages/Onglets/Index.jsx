@@ -19,19 +19,19 @@ function Index ()
     const [showAlert, setShowAlert] = useState(false);
     
       useEffect(() => {
-        // Pop après 20 secondes
+     
         const timerShow = setTimeout(() => {
           setShowAlert(true);
     
-          // Disparition après 5 secondes
+    
           const timerHide = setTimeout(() => {
             setShowAlert(false);
-          }, 50000); // ici tu peux changer le temps de disparition
+          }, 20000); // 
     
-          return () => clearTimeout(timerHide); // clean-up
-        }, 1000); // ici tu changes le temps d’apparition (20s)
+          return () => clearTimeout(timerHide); 
+        }, 20000); 
     
-        return () => clearTimeout(timerShow); // clean-up
+        return () => clearTimeout(timerShow); 
       }, []);
 
       
