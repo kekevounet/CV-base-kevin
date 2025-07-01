@@ -7,24 +7,30 @@ function Terminal() {
   const [input, setInput] = useState("");
 const [history, setHistory] = useState([
 `
-
-$$\\   $$\\                    $$\\           
-$$ | $$  |                   \\__|          
-$$ |$$  / $$$$$$\\ $$\\    $$\\ $$\\ $$$$$$$\\  
-$$$$$  / $$  __$$\\ $$\\  $$  |$$ |$$  __$$\\ 
-$$  $$<  $$$$$$$$ |\\$$\\$$  / $$ |$$ |  $$ |
-$$ |\\$$\\ $$   ____| \\$$$  /  $$ |$$ |  $$ |
-$$ | \\$$\\$$$$$$$\\    \\$  /   $$ |$$ |  $$ |
-\\__|  \\__|\\_______|   \\_/    \\__|\\__|  \\__|
-                                           
-                                                                                           
-
+__| |_____________________________________________________________________________________________________| |__
+__   _____________________________________________________________________________________________________   __
+  | |                                                                                                     | |  
+  | |                                                                                                     | |  
+  | |    $$\\   $$\\ $$\\                                     $$\\   $$\\                    $$\\               | |  
+  | |    $$$\\  $$ |\\__|                                    $$ | $$  |                   \\__|              | |  
+  | |    $$$$\\ $$ |$$\\  $$$$$$\\ $$\\    $$\\  $$$$$$\\        $$ |$$  / $$$$$$\\ $$\\    $$\\ $$\\ $$$$$$$\\      | |  
+  | |    $$ $$\\$$ |$$ | \\____$$\\ $$\\  $$  |$$  __$$\\       $$$$$  / $$  __$$\\ $$\\  $$  |$$ |$$  __$$\\     | |  
+  | |    $$ \\$$$$ |$$ | $$$$$$$ |\\$$\\$$  / $$ /  $$ |      $$  $$<  $$$$$$$$ |\\$$\\$$  / $$ |$$ |  $$ |    | |  
+  | |    $$ |\\$$$ |$$ |$$  __$$ | \\$$$  /  $$ |  $$ |      $$ |\\$$\\ $$   ____| \\$$$  /  $$ |$$ |  $$ |    | |  
+  | |    $$ | \\$$ |$$ |\\$$$$$$$ |  \\$  /   \\$$$$$$  |      $$ | \\$$\\$$$$$$$\\    \\$  /   $$ |$$ |  $$ |    | |  
+  | |    \\__|  \\__|\\__| \\_______|   \\_/     \______/        \\__|  \\__|\\_______|   \\_/    \\__|\\__|  \\__|    | |  
+  | |                                                                                                     | |  
+  | |                                                                                                     | |  
+__| |_____________________________________________________________________________________________________| |__
+__   _____________________________________________________________________________________________________   __
+  | |                                                                                                     | |  
+ 
 `,
 "",
 "Bienvenue dans cette console",
 "Tapez `help` pour voir la liste des commandes disponibles."
 ]);
-
+  
   const kevinPrompt = "Kevin:~$";
   const inputRef = useRef(null);
 
@@ -47,6 +53,9 @@ $$ | \\$$\\$$$$$$$\\    \\$  /   $$ |$$ |  $$ |
         break;
       case "service":
         response = 'Sur ce plan, je peux créer des sites web responsives sur mesures, comme des sites vitrines, site e-catalogue, ou un application web tout simplement, n\'hésite pas à me contactez.'; 
+        break;
+      case "name":
+        response=`${history}`;
         break;
       case "clear":
         setHistory([]);
@@ -76,7 +85,7 @@ $$ | \\$$\\$$$$$$$\\    \\$  /   $$ |$$ |  $$ |
           {/* Output zone */}
           <div className="flex-1 p-4 space-y-3 overflow-auto font-mono text-sm bg-black lg:text-base">
             {history.map((line, index) => (
-              <pre key={index} className="leading-relaxed whitespace-pre-wrap">{line}</pre>
+              <pre key={index} className="overflow-x-auto leading-relaxed break-words break-all whitespace-pre">{line}</pre>
             ))}
             <div className="flex items-center mt-2 space-x-2">
               <span className="font-bold">{kevinPrompt}</span>
