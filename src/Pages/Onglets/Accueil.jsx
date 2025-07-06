@@ -53,7 +53,7 @@ function Accueil ({NavBarOuvert}) {
             </div>
             <hr />
             <div className='flex items-center my-1 text-center'><AiOutlineMail  className="mr-3 text-xl"/><a href="mailto:niavo.kevin9@gmail.com" target='_blank' rel='noopener noreferrer' className='text-white no-underline '>niavo.kevin9@gmail.com</a></div>
-            <div className='flex items-center my-1 text-center'><BsTelephone className="mr-2 text-xl"/> / <AiOutlineWhatsApp className="ml-1 mr-3 text-xl"/><a href="fs" className="text-white no-underline">038 94 233 51</a></div>
+            <div className='flex items-center my-1 text-center'><BsTelephone className="mr-2 text-xl"/> / <AiOutlineWhatsApp className="ml-1 mr-3 text-xl"/><a href="https://wa.me/0389423351" className="text-white no-underline" target="_blank" rel="nopenner noreferrer">038 94 233 51</a></div>
             <hr />
             <div className='p-2 text-center'>
               Développeur senior en devenir ; ) <br />
