@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Moi from '../../Assets/Niavo-Kevin.jpg';
 import { useEffect, useState } from 'react';
+import { ImSpinner } from 'react-icons/im';
+import Transition from '../Compenents/Transition';
 function Kevin(){
       const [Chargement, setChargement] = useState(true);
     
@@ -14,7 +16,7 @@ function Kevin(){
       if (Chargement) {
         return (
           <div className="flex items-center justify-center h-screen bg-stone-600">
-            <div className="w-32 h-32 border-t-2 border-b-2 border-white rounded-full animate-spin"></div>
+             <ImSpinner  className="text-white text-9xl animate-spin"/>
           </div>
         );
     }
@@ -26,4 +28,4 @@ function Kevin(){
         </div>
     );
 }
-export default Kevin;
+export default Transition(Kevin);

@@ -6,10 +6,10 @@ import standart from '../../Assets/standart.png';
 function Projets ({ NavBarOuvert }) {
   return (
     <div
-      className={`flex items-center justify-center w-full h-full text-white lg:h-screen ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
+      className={`haha flex items-center justify-center w-full h-full text-white lg:h-screen ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
       id='Projets'
     >
-      <div className='w-full h-[90%] lg:px-5 px-2 py-20 grid grid-cols-1 lg:grid-cols-4 lg:gap-3 gap-5 lg:overflow-scroll'>
+      <div className='w-full h-[90%] lg:px-5 px-2 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-3 gap-5 lg:overflow-scroll'>
         {/* Projet voalohany */}
         <motion.div
           className=''
@@ -62,7 +62,7 @@ function Projets ({ NavBarOuvert }) {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <a href='https://stand-art.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline' title="Vous voulez avoir une autre comme celui là? ha">
+          <a href='https://stand-art.netlify.app/' target='_blank' rel='noopener noreferrer' className='text-white no-underline' title="Stand'art propose une large de gamme, voyez par vous même.">
             <img src={standart} alt='me' className='w-full h-60' />
             <div className='p-3 text-sm text-center border-b border-white lg:text-base'>
               Stand'art

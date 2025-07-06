@@ -1,3 +1,4 @@
+import { AiOutlineUser } from "react-icons/ai"; 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -16,7 +17,7 @@ function useIsMobile () {
 function NavBar ({NavBarOuvert, setNavBarOuvert}) {
 
   // Etat
-  const AnimNavInitial = { translateY: '-180%' }
+  const AnimNavInitial = { scale: 0 }
   const AnimNavLiInitial = { scale: 0.5 }
   const isMobile = useIsMobile();
 
@@ -55,19 +56,17 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
         ${NavBarOuvert ? 'w-[50%] h-screen lg:h-20 lg:w-full ' : ' h-20 w-full'}
         `}
       initial={AnimNavInitial}
-      animate={{ translateY: 0, transition: { duration: 0.5 } }}
+      animate={{ scale: 1, transition: { duration: 0.5 } }}
     >
       {/* items voalohany anatin'ilay Navigation barre */}
       <motion.div
         className='absolute top-5 left-5 lg:static lg:ml-10'
         initial={AnimNavInitial}
-        animate={{ translateY: 0, transition: { duration: 0.5, delay: 1 } }}
+        animate={{ scale: 1, transition: { duration: 0.5, delay: 1 } }}
       >
         <Link to='Kevin'>
-          <i
-            className='text-5xl text-white fas fa-user-graduate'
-            title='Voir mon CV'
-          ></i>
+          <AiOutlineUser className='text-5xl text-white fas fa-user-graduate'
+            title='Voir mon CV'/>
         </Link>
       </motion.div>
 
@@ -79,12 +78,12 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
               key={name}
               className='my-3 font-bold list-none'
               initial={AnimNavInitial}
-              animate={{ translateY: 0, transition: { duration: 0.5, delay: 1.5 } }}
+              animate={{ scale: 1, transition: { duration: 0.5, delay: 1.5 } }}
               whileTap={AnimNavLiInitial}
             >
             <a
               href={`#${name}`}
-              className='p-4 text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b hover:shadow-[inset_0px_0px_10px_rgb(50,50,50)]'
+              className='p-4 text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b-2 hover:shadow-[inset_0px_0px_10px_rgb(40,40,40)]'
               title={`${name}`}
               onClick={() => {
                 if (isMobile) {
@@ -100,12 +99,12 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
           <motion.li 
               className='my-3 text-lg font-bold list-none'
               initial={AnimNavInitial}
-              animate={{ translateY: 0, transition: { duration: 0.5, delay: 1.5 } }}
+              animate={{ scale: 1, transition: { duration: 0.5, delay: 1.5 } }}
               whileTap={AnimNavLiInitial}
             >
             <Link
             to='/Terminal'
-              className='p-4 text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b hover:shadow-[inset_0px_0px_10px_rgb(50,50,50)]'
+              className='p-4 text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b hover:shadow-[inset_0px_0px_10px_rgb(40,40,40)]'
               title={`Terminal`}
               onClick={() => {
                 if (isMobile) {
@@ -130,7 +129,7 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
         <motion.div
           className='absolute transition-all duration-500 cursor-pointer top-5 right-5 lg:hidden'
           initial={AnimNavInitial}
-          animate={{ translateY: 0, transition: { duration: 0.5, delay: 0.5 } }}
+          animate={{ scale: 1, transition: { duration: 0.5, delay: 0.5 } }}
         >
           <i
             className='text-5xl fas fa-xmark'

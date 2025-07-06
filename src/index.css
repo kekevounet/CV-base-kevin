@@ -15,7 +15,7 @@
 body {
   /* le somary violet fa unie */
   background-image: linear-gradient(209deg, rgba(104, 104, 104, 0.2),rgba(98, 98, 98, 0.2)),linear-gradient(45deg, rgb(72, 72, 72) 0%,rgb(0, 0, 0) 11%,rgb(144, 144, 144) 16%,rgb(24, 24, 24) 17%,rgb(120, 120, 120) 71%,rgb(48, 48, 48) 94%,rgb(96, 96, 96) 100%);
-
+  
 
 
   background-attachment: fixed;
@@ -26,6 +26,16 @@ body {
 {
   background-image: linear-gradient(209deg, rgba(104, 104, 104, 0.2),rgba(98, 98, 98, 0.2)),linear-gradient(45deg, rgb(72, 72, 72) 0%,rgb(0, 0, 0) 11%,rgb(144, 144, 144) 16%,rgb(24, 24, 24) 17%,rgb(120, 120, 120) 71%,rgb(48, 48, 48) 94%,rgb(96, 96, 96) 100%);
 
+}
+.haha
+{
+  background-image: linear-gradient(209deg, rgba(104, 104, 104, 0.2),rgba(98, 98, 98, 0.2)),linear-gradient(315deg, rgb(72, 72, 72) 0%,rgb(0, 0, 0) 11%,rgb(144, 144, 144) 16%,rgb(24, 24, 24) 17%,rgb(120, 120, 120) 71%,rgb(48, 48, 48) 94%,rgb(96, 96, 96) 100%);
+  
+
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .Transition
 {

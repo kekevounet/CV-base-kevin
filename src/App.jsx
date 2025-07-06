@@ -1,5 +1,4 @@
-
-import { GiSpinalCoil } from "react-icons/gi"; 
+import { ImSpinner } from "react-icons/im"; 
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Index from './Pages/Onglets/Index';
 import Kevin from './Pages/Onglets/Kevin';
@@ -23,7 +22,7 @@ function App(){
   if (Chargement) {
     return (
       <div className="flex items-center justify-center h-screen bg-stone-700">
-        <GiSpinalCoil className="text-white text-9xl animate-spin"/>
+        <ImSpinner  className="text-white text-9xl animate-spin"/>
       </div>
     );
   }
