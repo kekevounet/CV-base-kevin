@@ -25,7 +25,8 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
     {name:'Accueil', icon:'fa-house-user'},
     {name:'Compétences', icon:'fa-list-check'},
     {name:'Expériences', icon:'fa-briefcase'},
-    {name:'Projets', icon:'fa-laptop-code'}
+    {name:'Projets', icon:'fa-laptop-code'},
+    {name:'Contact', icon:'fa-envelope'}
   ];
 
   
@@ -91,7 +92,7 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
                 }
               }}
             >
-              <i className={`mr-3 fa-solid ${icon}`}></i>
+              <i className={`mr-3 fa-solid ${icon} absolute lg:static left-3`}></i>
               {name}
             </a>
           </motion.li>
@@ -112,7 +113,7 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
                 }
               }}
             >
-              <i className={`mr-3 fa-solid fa-terminal`}></i>
+              <i className={`mr-3 fa-solid fa-terminal absolute lg:static left-3`}></i>
               Terminal
             </Link>
           </motion.li>

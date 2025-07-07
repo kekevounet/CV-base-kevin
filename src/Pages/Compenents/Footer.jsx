@@ -11,7 +11,7 @@ function Footer ({ NavBarOuvert }) {
 
   // Affichage
   return (
-    <>
+    <div className='pt-20 md:pt-40 lg:pt-0'>
       <footer className={`grid w-full h-auto grid-cols-3 gap-2 text-sm text-white border-t lg:text-base bg-stone-900 bg-opacity-90 ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}>
         <div className='flex items-center justify-center w-full h-full col-span-3 sm:col-span-1'>
           <div className='mx-6 my-3 text-center'>Contactez en cas de besoin.</div>
@@ -45,7 +45,7 @@ function Footer ({ NavBarOuvert }) {
         <footer className='flex items-center justify-center w-full h-auto gap-2 p-3 text-base text-white border-t bg-stone-900 bg-opacity-90'>
           &copy; 2025 Niavo Kevin. Tous droits réservés.
         </footer>
-    </>
+    </div>
   )
 }
 export default Footer
