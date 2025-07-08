@@ -64,9 +64,10 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
         className='absolute top-5 left-5 lg:static lg:ml-10'
         initial={AnimNavInitial}
         animate={{ scale: 1, transition: { duration: 0.5, delay: 1 } }}
+        whileTap={{scale:0.5}}
       >
         <Link to='Kevin'>
-          <AiOutlineUser className='text-5xl text-white fas fa-user-graduate'
+          <AiOutlineUser className='text-5xl text-white fas fa-user-graduate '
             title='Voir mon CV'/>
         </Link>
       </motion.div>
@@ -132,10 +133,12 @@ function NavBar ({NavBarOuvert, setNavBarOuvert}) {
           initial={AnimNavInitial}
           animate={{ scale: 1, transition: { duration: 0.5, delay: 0.5 } }}
         >
-          <i
+          <motion.i
             className='text-5xl fas fa-xmark'
             onClick={() => setNavBarOuvert(!NavBarOuvert)}
-          ></i>
+            initial={{scale:1}}
+            whileTap={{scale:0.5}}
+          ></motion.i>
         </motion.div>
       ) : (
         <div className='absolute transition-all duration-500 cursor-pointer top-5 right-5 lg:hidden'>

@@ -7,19 +7,19 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs"; 
 import { BsTelephone } from "react-icons/bs"; 
 import { motion } from 'framer-motion'
-export default function Contact () {
+export default function Contact ({NavBarOuvert}) {
   // Etat
 
   // Affichage
   return (
     <div
-      className='flex items-center justify-center w-full h-full lg:mb-32 mb-96 lg:h-screen pb-96 lg:p-0'
+      className={`flex items-center justify-center w-full h-full lg:mb-32 mb-96 lg:h-screen pb-96 lg:p-0 ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
       id='Contact'
     >
       <div className='w-full lg:h-[80%] h-screen p-2 mt-20 flex justify-between items-center gap-5 flex-col lg:flex-row'>
 
         {/* Contact texte */}
-        <div className='w-full h-screen  border border-white lg:h-full bg-stone-900 lg:ml-20'>
+        <div className='w-full h-screen border border-white lg:h-full bg-stone-900 lg:ml-20'>
 
             <div className='p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b'>
                 Informations
@@ -28,25 +28,25 @@ export default function Contact () {
             <div className="w-full h-screen lg:h-[90.9%] mt-1 flex flex-col lg:flex-row">
 
                 {/* Côté gauche */}
-                <div className="flex flex-col items-center justify-center w-full h-screen lg:h-full space-y-5 text-xl font-bold text-white border-r border-white">
-                    <div className="flex items-center hover:bg-stone-700 rounded-xl cursor-not-allowed p-3 hover:outline outline-1 outline-stone-300 outline-offset-4"><BsTelephone className="mr-3 absolute left-5 lg:static"/> : 0389423351</div>
-                    <a className="flex items-center hover:bg-stone-700 rounded-xl cursor-pointer p-3 text-white no-underline hover:outline outline-1 outline-stone-300 outline-offset-4" href="https://wa.me/0389423351" target="_blank" rel="noopener noreferrer"><BsWhatsapp className="mr-3 absolute left-5 lg:static"/> : 0389423351</a>
-                    <a className="flex items-center hover:bg-stone-700 rounded-xl cursor-pointer p-3 text-white no-underline hover:outline outline-1 outline-stone-300 outline-offset-4" href="qfq" target="_blank" rel="noopener noreferrer"><FiLinkedin className="mr-3 absolute left-5 lg:static"/> : Niavo Kevin</a>
-                    <a className="flex items-center hover:bg-stone-700 rounded-xl cursor-pointer p-3 text-white no-underline hover:outline outline-1 outline-stone-300 outline-offset-4" href="qfq" target="_blank" rel="noopener noreferrer"><CiFacebook className="mr-3 absolute left-5 lg:static"/> : Niavo Kevin</a>
-                    <a className="flex items-center hover:bg-stone-700 rounded-xl cursor-pointer p-3 text-white no-underline hover:outline outline-1 outline-stone-300 outline-offset-4" href="mailto:niavo.kevin9@gmail.com" target="_blank" rel="noopener noreferrer"><AiOutlineMail className="mr-3 absolute left-5 lg:static"/> : niavo.kevin9@gmail.com</a>
+                <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-r border-white lg:h-full">
+                    <div className="flex items-center p-3 cursor-not-allowed hover:bg-stone-700 rounded-xl hover:outline outline-1 outline-stone-300 outline-offset-4"><BsTelephone className="absolute mr-3 left-5 lg:static"/> : 0389423351</div>
+                    <a className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-stone-700 rounded-xl hover:outline outline-1 outline-stone-300 outline-offset-4" href="https://wa.me/0389423351" target="_blank" rel="noopener noreferrer"><BsWhatsapp className="absolute mr-3 left-5 lg:static"/> : 0389423351</a>
+                    <a className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-stone-700 rounded-xl hover:outline outline-1 outline-stone-300 outline-offset-4" href="qfq" target="_blank" rel="noopener noreferrer"><FiLinkedin className="absolute mr-3 left-5 lg:static"/> : Niavo Kevin</a>
+                    <a className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-stone-700 rounded-xl hover:outline outline-1 outline-stone-300 outline-offset-4" href="qfq" target="_blank" rel="noopener noreferrer"><CiFacebook className="absolute mr-3 left-5 lg:static"/> : Niavo Kevin</a>
+                    <a className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-stone-700 rounded-xl hover:outline outline-1 outline-stone-300 outline-offset-4" href="mailto:niavo.kevin9@gmail.com" target="_blank" rel="noopener noreferrer"><AiOutlineMail className="absolute mr-3 left-5 lg:static"/> : niavo.kevin9@gmail.com</a>
                 </div>
 
                 {/* Côté droite */}
-                <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-white h-screen lg:h-full border-t lg:border-none">
+                <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-t border-white lg:h-full lg:border-none">
                     <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-white h-1/2">
-                      <div className="flex items-center justify-center"><AiOutlineUser className="mr-3 absolute left-5 lg:static" /> MAMINIRINA Niavo Kevin</div>
-                      <div className="flex items-center justify-center"><BiCodeAlt className="mr-3 absolute left-5 lg:static"/> Développeur fullstack JS Junior</div>
-                      <div className="flex items-center justify-center"><FaMapMarkerAlt className="mr-3 absolute left-5 lg:static"/> Itaosy Antananarivo Madagascar</div>
-                    </div>
+                    <div className="flex items-center justify-center"><AiOutlineUser className="absolute mr-3 left-5 lg:static" /> MAMINIRINA Niavo Kevin</div>
+                    <div className="flex items-center justify-center"><BiCodeAlt className="absolute mr-3 left-5 lg:static"/> Développeur fullstack JS Junior</div>
+                    <div className="flex items-center justify-center"><FaMapMarkerAlt className="absolute mr-3 left-5 lg:static"/> Itaosy Antananarivo Madagascar</div>
+                </div>
 
                     {/* Map */}
                     <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-white h-1/2">
-                      <div className='w-full h-full border-2 border-white bg-white'>
+                      <div className='w-full h-full bg-white border-2 border-white'>
                         <iframe
                           title="Location de Niavo Kevin"
                           width='100%'

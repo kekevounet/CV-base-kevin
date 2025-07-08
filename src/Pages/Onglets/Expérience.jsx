@@ -17,7 +17,7 @@ function Experience ({ NavBarOuvert }) {
         >
           {/* Exp 1 */}
           <div className='relative p-3 text-left border-t rounded-lg lg:text-center bg-stone-700 bg-opacity-90'>
-            Préstataire - Trilogy distribution en django{' '}
+            Préstataire - Trilogy en django{' '}
             <span className='absolute right-5'>
               <i className='fas fa-hourglass'></i> En cours
             </span>

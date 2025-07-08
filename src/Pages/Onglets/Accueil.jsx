@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import circuit from '../../Assets/circuit.png'
 import { ImSpinner } from 'react-icons/im';
+import Kevin2 from '../../Assets/circuit2.png'
 
 function Accueil ({NavBarOuvert}) {
   // Etat
@@ -98,13 +99,29 @@ function Accueil ({NavBarOuvert}) {
 
           {/* Image au centre (Kevin) */}
           <div
-            className="relative z-10 w-[85%] lg:bottom-0 lg:top-6 h-[280px] lg:w-[33%] lg:h-[31%] overflow-hidden flex justify-center items-center"
+            className="relative z-10 w-[85%] lg:bottom-0 lg:top-6 h-[280px] lg:w-[33%] lg:h-[31%] overflow-hidden lg:flex justify-center items-center hidden"
           >
             <motion.img
               src={Kevin}
               alt="Kevin"
               title="Niavo Kevin"
               className="absolute object-cover w-full h-full border border-black shadow-lg cursor-move"
+              drag
+              dragElastic={1.1}
+              dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
+              initial={TextAcceuil}
+              animate={{ scale: 1, transition: { duration: 0.5, delay: 1 } }}
+            />
+          </div>
+          
+          <div
+            className="relative z-10 w-[100%] h-[70vh] overflow-hidden flex justify-center items-center lg:hidden"
+          >
+            <motion.img
+              src={Kevin2}
+              alt="Kevin"
+              title="Niavo Kevin"
+              className="absolute object-cover w-full h-full shadow-lg cursor-move"
               drag
               dragElastic={1.1}
               dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
