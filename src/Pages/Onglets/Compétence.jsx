@@ -35,13 +35,13 @@ function Competences ({NavBarOuvert}) {
                 Développement web
               </div>
               <div className='mt-3'>
-                <li className='flex items-center list-none'><FaReact className="mr-3 text-xl"/>Javascript / React JS</li>
-                <li className='flex items-center list-none'><GrNode className="mr-3 text-xl" />Node JS / Express JS</li>
-                <li className='flex items-center list-none'><TbBrandDjango className="mr-3 text-xl"/>Python / Django</li>
-                <li className='flex items-center list-none'><FaLaravel className="mr-3 text-xl"/>PHP / Laravel ( Base )</li>
-                <li className='flex items-center list-none'><ImHtmlFive className="mr-1 text-xl"/> / <FaCss3Alt className="ml-1 mr-3 text-xl"/>HTML / CSS</li>
-                <li className='flex items-center list-none'><SiTailwindcss className="mr-3 text-xl"/>Tailwindcss</li>
-                <li className='flex items-center list-none'><FaBootstrap className="mr-3 text-xl"/>Bootstrap</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><FaReact className="mr-3 text-xl"/>Javascript / React JS</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><GrNode className="mr-3 text-xl" />Node JS / Express JS</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><TbBrandDjango className="mr-3 text-xl"/>Python / Django</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><FaLaravel className="mr-3 text-xl"/>PHP / Laravel ( Base )</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><ImHtmlFive className="mr-1 text-xl"/> / <FaCss3Alt className="ml-1 mr-3 text-xl"/>HTML / CSS</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><SiTailwindcss className="mr-3 text-xl"/>Tailwindcss</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><FaBootstrap className="mr-3 text-xl"/>Bootstrap</li>
               </div>
             </div>
 
@@ -50,10 +50,10 @@ function Competences ({NavBarOuvert}) {
                 Développement logiciel
               </div>
               <div className='mt-3'>
-                <li className='flex items-center list-none'>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'>
                   <TbBrandReactNative className="mr-3 text-xl"/>Javascript / React native ( Base )
                 </li>
-                <li className='flex items-center list-none'><FaPython className="mr-3 text-xl"/>Python / Tkinter ( En cours )</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><FaPython className="mr-3 text-xl"/>Python / Tkinter ( En cours )</li>
               </div>
             </div>
 
@@ -62,10 +62,10 @@ function Competences ({NavBarOuvert}) {
                 Autres
               </div>
               <div className='mt-3'>
-                <li className='flex items-center list-none'><DiGit className="mr-3 text-xl"/>Git / GitHub</li>
-                <li className='flex items-center list-none'><GrMysql className="mr-3 text-xl"/>SGBD / Mysql</li>
-                <li className='flex items-center list-none'><TbBrandOffice className="mr-3 text-xl"/>MS Office</li>
-                <li className='flex items-center list-none'><TbBrandVscode className="mr-3 text-xl"/>VS Code</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><DiGit className="mr-3 text-xl"/>Git / GitHub</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><GrMysql className="mr-3 text-xl"/>SGBD / Mysql</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><TbBrandOffice className="mr-3 text-xl"/>MS Office</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><TbBrandVscode className="mr-3 text-xl"/>VS Code</li>
               </div>
             </div>
 
@@ -74,11 +74,11 @@ function Competences ({NavBarOuvert}) {
                 Soft skills
               </div>
               <div className='mt-3'>
-                <li className='flex items-center list-none'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Positif</li>
-                <li className='flex items-center list-none'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Rigoureux</li>
-                <li className='flex items-center list-none'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Esprit d'équipe</li>
-                <li className='flex items-center list-none'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Curieux</li>
-                <li className='flex items-center list-none'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Capacité d'adaptation</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Positif</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Rigoureux</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Esprit d'équipe</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Curieux</li>
+                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Capacité d'adaptation</li>
               </div>
             </div>
           </div>
