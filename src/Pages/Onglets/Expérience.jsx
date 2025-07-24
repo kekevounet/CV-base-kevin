@@ -17,18 +17,18 @@ function Experience ({ NavBarOuvert }) {
         >
           {/* Exp 1 */}
           <div className='relative p-3 text-left border-t rounded-lg lg:text-center bg-stone-700 bg-opacity-90'>
-            Préstataire - Trilogy en django{' '}
+            Développeur web - Stand'Art en React Js{' '}
             <span className='absolute right-5'>
-              <i className='fas fa-hourglass'></i> En cours
+              <i className='fas fa-hourglass'></i> Actuellement
             </span>
           </div>
           <div className='p-3'>
             <li className='text-sm lg:text-base'>
-              Conception et développement d'un site catalogue interactif pour
-              Trilogy, avec une interface utilisateur intuitive.
+              Conception et développement d'un site vitrine interactif pour
+              Stand'Art, avec une interface utilisateur intuitive.
             </li>
             <li className='text-sm lg:text-base'>
-              Intégration de fonctionnalités de recherche et de filtrage
+              Intégration de fonctionnalités
               avancées pour une navigation optimale.
             </li>
             <li className='text-sm lg:text-base'>

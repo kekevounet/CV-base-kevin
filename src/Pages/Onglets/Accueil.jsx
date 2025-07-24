@@ -1,9 +1,8 @@
-import { AiOutlineMail } from "react-icons/ai"; 
-import { AiOutlineWhatsApp } from "react-icons/ai"; 
-import { BsTelephone } from "react-icons/bs"; 
+import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { BsTelephone } from "react-icons/bs";
 import { motion } from 'framer-motion';
 import Kevin from '../../Assets/Kevin.jpg';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import circuit from '../../Assets/circuit.png'
 import { ImSpinner } from 'react-icons/im';
@@ -17,7 +16,7 @@ function Accueil ({NavBarOuvert}) {
   //Comportement
 
   useEffect(() => {
-    
+
     setTimeout(() => {
       setChargement(false);
     }, 3000);
@@ -38,7 +37,7 @@ function Accueil ({NavBarOuvert}) {
       className={`flex overflow-hidden items-center justify-center w-full h-full text-sm text-white bg-opacity-0 lg:h-screen lg:text-base ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
       id='Accueil'
     >
-    
+
       <div className='flex flex-col-reverse items-center justify-between w-full p-2 lg:p-3 h-2/3 lg:flex-row'>
         {/* eto le contenu voalohany */}
         <motion.div
@@ -61,7 +60,7 @@ function Accueil ({NavBarOuvert}) {
             Développeur Senior en devenir <br />
             Passionné par le développement web et mobile, je suis prêt à relever vos défis technologiques. <br />
             N’hésitez pas à me contacter pour discuter de vos projets ambitieux.
-              
+
             </div>
 
             <div className='flex flex-row justify-around w-full mt-5 space-x-5'>
@@ -80,16 +79,16 @@ function Accueil ({NavBarOuvert}) {
                 title='Niavo Kevin'
               >
                 <i className='mr-5 fas fa-address-card'></i>
-                <Link to='Kevin' className='w-full p-2 text-white no-underline'>
+                <div onClick={()=>alert('Cette fonctionnalité ne fonctionne pas pour le moment')} className='w-full text-white no-underline'>
                   Voir mon CV
-                </Link>
+                </div>
               </motion.div>
             </div>
           </div>
         </motion.div>
 
         {/* eto le contenu faharoany */}
-        <Parallax 
+        <Parallax
         rotate={[ '90', '-90']}
         speed={-10}
         className="relative flex items-center justify-center w-full h-[65%] lg:h-screen mt-24 lg:mt-10 lg:w-1/2 lg:scale-100">
@@ -118,7 +117,7 @@ function Accueil ({NavBarOuvert}) {
               animate={{ scale: 1, transition: { duration: 0.5, delay: 1 } }}
             />
           </div>
-          
+
           <div
             className="relative z-10 w-[100%] h-[70vh] overflow-hidden flex justify-center items-center lg:hidden"
           >
@@ -252,7 +251,7 @@ export default Accueil
 //         </Parallax>
 
 //         {/* 16. Effet diagonal */}
-//         <Parallax translateX={['-100px', '100px']}> 
+//         <Parallax translateX={['-100px', '100px']}>
 //           <h2 className="text-3xl text-center text-indigo-700">Déplacement diagonal</h2>
 //         </Parallax>
 
