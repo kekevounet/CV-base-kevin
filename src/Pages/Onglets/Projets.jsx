@@ -6,7 +6,7 @@ import standart from '../../Assets/standart.png';
 function Projets ({ NavBarOuvert }) {
   return (
     <div
-      className={`haha flex items-center justify-center w-full h-full text-white lg:h-screen ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
+      className={`flex items-center justify-center w-full h-full text-white lg:h-screen selection:bg-stone-900  ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
       id='Projets'
     >
       <div className='w-full h-[90%] lg:px-5 px-2 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-3 gap-5 lg:overflow-scroll'>

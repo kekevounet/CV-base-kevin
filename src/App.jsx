@@ -1,4 +1,4 @@
-import { ImSpinner } from "react-icons/im"; 
+import { ImSpinner } from "react-icons/im";
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Index from './Pages/Onglets/Index';
 import Kevin from './Pages/Onglets/Kevin';
@@ -13,7 +13,7 @@ function App(){
 
   // Comportement
   useEffect(() => {
-    
+
     setTimeout(() => {
       setChargement(false);
     }, 3000);

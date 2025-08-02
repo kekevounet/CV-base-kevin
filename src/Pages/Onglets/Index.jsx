@@ -1,5 +1,5 @@
-import { BiXCircle } from "react-icons/bi"; 
-import { AiOutlineInfoCircle } from "react-icons/ai"; 
+import { BiXCircle } from "react-icons/bi";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import { useEffect, useState } from 'react';
 import Footer from '../Compenents/Footer';
 import NavBar from '../Compenents/NavBar';
@@ -18,27 +18,27 @@ function Index ()
       () => window.innerWidth >= 768
     )
     const [showAlert, setShowAlert] = useState(false);
-    
+
       useEffect(() => {
-     
+
         const timerShow = setTimeout(() => {
           setShowAlert(true);
-    
-    
+
+
           const timerHide = setTimeout(() => {
             setShowAlert(false);
-          }, 20000); // 
-    
-          return () => clearTimeout(timerHide); 
-        }, 20000); 
-    
-        return () => clearTimeout(timerShow); 
+          }, 20000); //
+
+          return () => clearTimeout(timerHide);
+        }, 20000);
+
+        return () => clearTimeout(timerShow);
       }, []);
 
-      
+
   // Affichage
   return (
-    <div className={`z-50 w-full h-full`}>
+    <div className={`z-50 w-full h-full selection:bg-stone-900 `}>
       <NavBar NavBarOuvert = {NavBarOuvert} setNavBarOuvert = {setNavBarOuvert}/>
       <Accueil NavBarOuvert = {NavBarOuvert} />
       <Competences NavBarOuvert = {NavBarOuvert} />

@@ -1,9 +1,9 @@
-import { BiCodeAlt } from "react-icons/bi"; 
-import { FaMapMarkerAlt } from "react-icons/fa"; 
-import { AiOutlineUser, AiOutlineMail } from "react-icons/ai"; 
-import { CiFacebook } from "react-icons/ci"; 
-import { FiLinkedin } from "react-icons/fi"; 
-import { BsWhatsapp, BsTelephone } from "react-icons/bs"; 
+import { BiCodeAlt } from "react-icons/bi";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
+import { CiFacebook } from "react-icons/ci";
+import { FiLinkedin } from "react-icons/fi";
+import { BsWhatsapp, BsTelephone } from "react-icons/bs";
 import { motion } from 'framer-motion'
 import Swal from 'sweetalert2'
 import React from "react";
@@ -67,7 +67,7 @@ export default function Contact({ NavBarOuvert }) {
   return (
     <div
       id="Contact"
-      className={`flex items-center justify-center w-full h-full lg:mb-32 mb-96 lg:h-screen pb-96 lg:p-0 ${
+      className={`flex items-center justify-center w-full h-full lg:mb-32 mb-96 lg:h-screen pb-96 lg:p-0 selection:bg-stone-900  ${
         NavBarOuvert ? "blur-sm lg:blur-none" : ""
       }`}
     >
@@ -133,7 +133,7 @@ export default function Contact({ NavBarOuvert }) {
 
               {/* Map */}
               <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-white h-1/2">
-                <div className="w-full h-full bg-white border-2 border-white">
+                <div className="w-full h-[98%] bg-white border border-white">
                   <iframe
                     title="Location de Niavo Kevin"
                     width="100%"

@@ -1,8 +1,8 @@
-import { BsFillEnvelopeFill } from "react-icons/bs"; 
-import { FaLaptopCode } from "react-icons/fa"; 
-import { BsFillBriefcaseFill } from "react-icons/bs"; 
-import { BsFillPersonCheckFill } from "react-icons/bs"; 
-import { FaHome } from "react-icons/fa"; 
+import { BsFillEnvelopeFill } from "react-icons/bs";
+import { FaLaptopCode } from "react-icons/fa";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import { BsFillPersonCheckFill } from "react-icons/bs";
+import { FaHome } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -22,7 +22,6 @@ function useIsMobile() {
 function NavBar({ NavBarOuvert, setNavBarOuvert }) {
   // Etat
   const AnimNavInitial = { scale: 0 };
-  const AnimNavLiInitial = { scale: 0.5 };
   const isMobile = useIsMobile();
 
   const NavLink = [
@@ -65,7 +64,7 @@ function NavBar({ NavBarOuvert, setNavBarOuvert }) {
         animate={{ scale: 1, transition: { duration: 0.5, delay: 1 } }}
         whileTap={{ scale: 0.5 }}
       >
-        <Link to="Kevin">
+        <Link to="Terminal">
           <AiOutlineUser
             className="text-5xl text-white fas fa-user-graduate "
             title="Voir mon CV"
@@ -73,20 +72,20 @@ function NavBar({ NavBarOuvert, setNavBarOuvert }) {
         </Link>
       </motion.div>
 
+
       {/* items faharoa anatin'ilay Navigation barre */}
       {NavBarOuvert && (
         <div className="flex flex-col items-center mr-10 justify-center w-full space-x-2 h-1/3 lg:flex-row lg:w-1/2 lg:space-y-0">
           {NavLink.map(({ name, icon }) => (
             <motion.li
               key={name}
-              className="my-3 font-bold list-none"
+              className="my-3 font-bold list-none w-full"
               initial={AnimNavInitial}
               animate={{ scale: 1, transition: { duration: 0.5, delay: 1.5 } }}
-              whileTap={AnimNavLiInitial}
             >
               <a
                 href={`#${name}`}
-                className="p-4 text-white relative no-underline transition-all group flex duration-300 rounded-lg hover:border-b-2"
+                className="p-4 text-white relative no-underline transition-all group flex duration-300 lg:w-full w-[130%]"
                 title={`${name}`}
                 onClick={() => {
                   if (isMobile) {
@@ -95,20 +94,28 @@ function NavBar({ NavBarOuvert, setNavBarOuvert }) {
                 }}
               >
                 <span className="mr-3 absolute lg:static left-3 text-2xl z-40">{icon}</span>
-                <span className="z-40">{name}</span>
-                <span className="bottom-0 left-0 bg-stone-700  rounded-lg absolute w-full h-0 group-hover:h-full transition-all duration-500 shadow-[inset_0px_0px_10px_rgb(40,40,40)]"></span>
+                <span className="z-40 w-full flex justify-center">{name}</span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-0 top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[10%] transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-[20%] top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[30%] transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-[40%] top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[50%] transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-[60%] top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[70%] transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-[80%] top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[90%] transition-all duration-500"></span>
               </a>
             </motion.li>
           ))}
           <motion.li
-            className="my-3 text-lg font-bold list-none"
+            className="my-3 text-lg font-bold list-none w-full"
             initial={AnimNavInitial}
             animate={{ scale: 1, transition: { duration: 0.5, delay: 1.5 } }}
-            whileTap={AnimNavLiInitial}
           >
             <Link
               to="/Terminal"
-              className="p-4 flex text-white no-underline transition-all duration-300 rounded-lg hover:bg-stone-700 hover:border-b hover:shadow-[inset_0px_0px_10px_rgb(40,40,40)]"
+              className="p-4 flex text-white no-underline transition-all duration-300 group relative lg:w-full w-[130%]"
               title={`Terminal`}
               onClick={() => {
                 if (isMobile) {
@@ -119,7 +126,17 @@ function NavBar({ NavBarOuvert, setNavBarOuvert }) {
               <i
                 className={`mr-3 fa-solid fa-terminal absolute lg:static left-3`}
               ></i>
-              Terminal
+              <span className=" flex justify-center z-40 w-full">Terminal</span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-0 top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[10%] transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-[20%] top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[30%] transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-[40%] top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[50%] transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-[60%] top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[70%] transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full left-[80%] top-0 transition-all duration-500"></span>
+                <span className="bg-stone-700 w-[10%] h-0 -z-10 absolute group-hover:h-full bottom-0 left-[90%] transition-all duration-500"></span>
             </Link>
           </motion.li>
         </div>

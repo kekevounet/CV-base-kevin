@@ -5,17 +5,17 @@ import { ImSpinner } from 'react-icons/im';
 import Transition from '../Compenents/Transition';
 function Kevin(){
       const [Chargement, setChargement] = useState(true);
-    
+
      useEffect(() => {
-        
+
         setTimeout(() => {
           setChargement(false);
         }, 3000);
       }, []);
-    
+
       if (Chargement) {
         return (
-          <div className="flex items-center justify-center h-screen bg-stone-600">
+          <div className="flex items-center justify-center h-screen bg-stone-600 selection:bg-stone-900 ">
              <ImSpinner  className="text-white text-9xl animate-spin"/>
           </div>
         );

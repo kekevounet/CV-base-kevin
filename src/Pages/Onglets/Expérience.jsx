@@ -4,7 +4,7 @@ import exp from '../../Assets/exp.JPG'
 function Experience ({ NavBarOuvert }) {
   return (
     <div
-      className={`flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-sm ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
+      className={`flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-sm selection:bg-stone-900  ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
       id='Expériences'
     >
       <div className='flex flex-col w-full mx-2 mt-20 rounded-lg h-[60%] lg:mx-5 lg:flex-row lg:justify-between '>
@@ -34,12 +34,12 @@ function Experience ({ NavBarOuvert }) {
             <li className='text-sm lg:text-base'>
               Utilisation de technologies modernes pour garantir la performance
               du site.
-              {/* 
-              
+              {/*
 
-____    ____       ______    ____      ____  ____  _____   ______   
-|    |  |    |  ___|\\     \\  |    |    |    ||    ||\\    \\ |\\    \\  
-|    |  |    | |     \\     \\ |    |    |    ||    | \\    \\| \\     \\ 
+
+____    ____       ______    ____      ____  ____  _____   ______
+|    |  |    |  ___|\\     \\  |    |    |    ||    ||\\    \\ |\\    \\
+|    |  |    | |     \\     \\ |    |    |    ||    | \\    \\| \\     \\
 |    | /    // |     ,_____/||    |    |    ||    |  \\|    \\  \\    |
 |    |/ _ _//  |     \\--'\\_|/|    |    |    ||    |   |     \\  |    |
 |    |\\    \\'  |     /___/|  |    |    |    ||    |   |      \\ |    |
@@ -47,27 +47,27 @@ ____    ____       ______    ____      ____  ____  _____   ______
 |____|  \\____\\ |____ '     /|| \\ ___\\/___ / ||____|   |____||\\_____/|
 |    |   |    ||    /_____/ | \\ |   ||   | / |    |   |    |/ \\|   ||
 |____|   |____||____|     | /  \\|___||___|/  |____|   |____|   |___|/
-  \\(       )/    \\( |_____|/     \\(    )/      \\(       \\(       )/  
-   '       '      '    )/         '    '        '        '       '   
-                       '                                             
+  \\(       )/    \\( |_____|/     \\(    )/      \\(       \\(       )/
+   '       '      '    )/         '    '        '        '       '
+                       '
 
 
 
-              
+
               */}
 
-              {/* 
-              
-              
-$$\\   $$\\                    $$\\           
-$$ | $$  |                   \\__|          
-$$ |$$  / $$$$$$\\ $$\\    $$\\ $$\\ $$$$$$$\\  
-$$$$$  / $$  __$$\\ $$\\  $$  |$$ |$$  __$$\\ 
+              {/*
+
+
+$$\\   $$\\                    $$\\
+$$ | $$  |                   \\__|
+$$ |$$  / $$$$$$\\ $$\\    $$\\ $$\\ $$$$$$$\\
+$$$$$  / $$  __$$\\ $$\\  $$  |$$ |$$  __$$\\
 $$  $$<  $$$$$$$$ |\\$$\\$$  / $$ |$$ |  $$ |
 $$ |\\$$\\ $$   ____| \\$$$  /  $$ |$$ |  $$ |
 $$ | \\$$\\$$$$$$$\\    \\$  /   $$ |$$ |  $$ |
 \\__|  \\__|\\_______|   \\_/    \\__|\\__|  \\__|
-     
+
 */}
             </li>
           </div>

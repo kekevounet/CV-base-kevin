@@ -15,7 +15,8 @@
 body {
   /* le somary violet fa unie */
   background-image: linear-gradient(209deg, rgba(104, 104, 104, 0.2),rgba(98, 98, 98, 0.2)),linear-gradient(45deg, rgb(72, 72, 72) 0%,rgb(0, 0, 0) 11%,rgb(144, 144, 144) 16%,rgb(24, 24, 24) 17%,rgb(120, 120, 120) 71%,rgb(48, 48, 48) 94%,rgb(96, 96, 96) 100%);
-  
+
+
 
 
   background-attachment: fixed;
@@ -30,7 +31,7 @@ body {
 .haha
 {
   background-image: linear-gradient(209deg, rgba(104, 104, 104, 0.2),rgba(98, 98, 98, 0.2)),linear-gradient(315deg, rgb(72, 72, 72) 0%,rgb(0, 0, 0) 11%,rgb(144, 144, 144) 16%,rgb(24, 24, 24) 17%,rgb(120, 120, 120) 71%,rgb(48, 48, 48) 94%,rgb(96, 96, 96) 100%);
-  
+
 
 
   background-attachment: fixed;
@@ -81,4 +82,41 @@ body {
 {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+
+.fondfixe
+{
+  background-image: radial-gradient(circle at top right, rgb(4, 20, 62) 0%, rgb(4, 20, 62) 28%,rgb(49, 29, 62) 28%, rgb(49, 29, 62) 45%,rgb(94, 38, 62) 45%, rgb(94, 38, 62) 63%,rgb(138, 47, 62) 63%, rgb(138, 47, 62) 100%);
+}
+.fondfixe1
+{
+  background-image: linear-gradient(146deg, rgba(44, 35, 109, 0.5) 0%, rgba(44, 35, 109, 0.5) 14.286%,rgba(64, 54, 108, 0.5) 14.286%, rgba(64, 54, 108, 0.5) 28.572%,rgba(83, 72, 106, 0.5) 28.572%, rgba(83, 72, 106, 0.5) 42.858%,rgba(103, 91, 105, 0.5) 42.858%, rgba(103, 91, 105, 0.5) 57.144%,rgba(123, 110, 103, 0.5) 57.144%, rgba(123, 110, 103, 0.5) 71.43%,rgba(142, 128, 102, 0.5) 71.43%, rgba(142, 128, 102, 0.5) 85.716%,rgba(162, 147, 100, 0.5) 85.716%, rgba(162, 147, 100, 0.5) 100.002%),linear-gradient(349deg, rgb(203, 4, 7) 0%, rgb(203, 4, 7) 14.286%,rgb(178, 9, 6) 14.286%, rgb(178, 9, 6) 28.572%,rgb(152, 13, 5) 28.572%, rgb(152, 13, 5) 42.858%,rgb(127, 18, 4) 42.858%, rgb(127, 18, 4) 57.144%,rgb(101, 22, 3) 57.144%, rgb(101, 22, 3) 71.43%,rgb(76, 27, 2) 71.43%, rgb(76, 27, 2) 85.716%,rgb(50, 31, 1) 85.716%, rgb(50, 31, 1) 100.002%);
+}
+.fondfixe2
+{
+  background-image: linear-gradient(45deg, rgb(42, 27, 53) 0%, rgb(42, 27, 53) 26%,rgb(82, 55, 64) 26%, rgb(82, 55, 64) 27%,rgb(121, 83, 76) 27%, rgb(121, 83, 76) 29%,rgb(161, 111, 87) 29%, rgb(161, 111, 87) 30%,rgb(200, 139, 99) 30%, rgb(200, 139, 99) 100%);
+}
+.fondfixe3
+{
+  /* Ito norma */
+  background-image: linear-gradient(45deg, rgb(47, 38, 96) 0%, rgb(47, 38, 96) 1%,rgb(80, 63, 103) 1%, rgb(80, 63, 103) 53%,rgb(113, 87, 110) 53%, rgb(113, 87, 110) 57%,rgb(146, 112, 116) 57%, rgb(146, 112, 116) 69%,rgb(179, 136, 123) 69%, rgb(179, 136, 123) 75%,rgb(212, 161, 130) 75%, rgb(212, 161, 130) 100%);
+}
+.fondfixe4
+{
+  /* Ito ko norma 2 */
+  background-image: linear-gradient(0deg, rgb(99, 72, 55) 0%, rgb(99, 72, 55) 33%,rgb(127, 84, 51) 33%, rgb(127, 84, 51) 49%,rgb(183, 109, 42) 49%, rgb(183, 109, 42) 53%,rgb(211, 121, 37) 53%, rgb(211, 121, 37) 61%,rgb(155, 96, 46) 61%, rgb(155, 96, 46) 84%,rgb(239, 133, 33) 84%, rgb(239, 133, 33) 100%);
+}
+.fondfixe5
+{
+  /* Ito ko norma 3 */
+  background-image: linear-gradient(0, rgb(166, 81, 85) 0%, rgb(166, 81, 85) 9%,rgb(200, 95, 80) 9%, rgb(200, 95, 80) 12%,rgb(131, 66, 90) 12%, rgb(131, 66, 90) 24%,rgb(234, 109, 75) 24%, rgb(234, 109, 75) 25%,rgb(97, 52, 95) 25%, rgb(97, 52, 95) 100%);
+}
+.fondfixe6
+{
+  background-image: linear-gradient(45deg, rgb(113, 91, 62) 0%, rgb(113, 91, 62) 70%,rgb(212, 178, 123) 70%, rgb(212, 178, 123) 71%,rgb(149, 113, 71) 71%, rgb(149, 113, 71) 77%,rgb(187, 138, 45) 77%, rgb(187, 138, 45) 87%,rgb(198, 166, 110) 87%, rgb(198, 166, 110) 96%,rgb(139, 103, 46) 96%, rgb(139, 103, 46) 100%);
+}
+.fondfixe7
+{
+  background-image: repeating-linear-gradient(135deg, rgb(190, 120, 50) 0px, rgb(190, 120, 50) 79px,rgb(185, 129, 73) 79px, rgb(185, 129, 73) 158px,rgb(186, 145, 94) 158px, rgb(186, 145, 94) 237px,rgb(103, 79, 48) 237px, rgb(103, 79, 48) 316px,rgb(145, 85, 37) 316px, rgb(145, 85, 37) 395px);
 }

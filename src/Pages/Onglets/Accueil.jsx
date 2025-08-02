@@ -34,7 +34,7 @@ function Accueil ({NavBarOuvert}) {
   return (
     <div
 
-      className={`flex overflow-hidden items-center justify-center w-full h-full text-sm text-white bg-opacity-0 lg:h-screen lg:text-base ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
+      className={`flex overflow-hidden items-center selection:bg-stone-900 justify-center w-full h-full text-sm text-white bg-opacity-0 lg:h-screen lg:text-base ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' }`}
       id='Accueil'
     >
 

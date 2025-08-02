@@ -1,103 +1,71 @@
-import { AiTwotoneCheckCircle } from "react-icons/ai"; 
-import { TbBrandOffice,TbBrandVscode,TbBrandDjango } from "react-icons/tb"; 
-import { GrMysql } from "react-icons/gr"; 
-import { DiGit } from "react-icons/di"; 
-import { TbBrandReactNative } from "react-icons/tb"; 
-import { SiTailwindcss } from "react-icons/si"; 
-import { ImHtmlFive } from "react-icons/im"; 
-import { FaCss3Alt, FaLaravel,FaReact,FaPython,FaBootstrap } from "react-icons/fa"; 
-import { GrNode } from "react-icons/gr"; 
-import { motion } from 'framer-motion';
-import exp from '../../Assets/Full.JPG';
+import { AiFillCheckCircle } from "react-icons/ai";
+import { TbBrandVscode } from "react-icons/tb";
+import { SiMysql } from "react-icons/si";
+import { BiGitBranch } from "react-icons/bi";
+import { AiFillGithub } from "react-icons/ai";
+import { FaPython } from "react-icons/fa";
+import { TbBrandReactNative } from "react-icons/tb";
+import { FaBootstrap } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
+import { AiFillHtml5 } from "react-icons/ai";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaLaravel } from "react-icons/fa";
+import { TbBrandDjango } from "react-icons/tb";
+import { FaNodeJs } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { Parallax } from "react-scroll-parallax";
 
-function Competences ({NavBarOuvert}) {
+export default function Compétences({ NavBarOuvert }) {
+  const compts = [
+    { titre: 'Javascript / React JS', icon: <FaReact />, desc: 'Développement d’interfaces web dynamiques et réactives avec React JS.' },
+    { titre: 'Node JS / Express JS', icon: <FaNodeJs />, desc: 'Création d’API performantes et sécurisées avec Express.js.' },
+    { titre: 'Python / Django', icon: <TbBrandDjango />, desc: 'Développement d’applications back-end robustes avec Django.' },
+    { titre: 'PHP / Laravel ( base )', icon: <FaLaravel />, desc: 'Bases en développement PHP moderne avec Laravel.' },
+    { titre: 'HTML / CSS', icon: [<AiFillHtml5 />, <FaCss3Alt />], desc: 'Mise en page soignée et responsive avec HTML5 et CSS3.' },
+    { titre: 'TailwindCss', icon: <SiTailwindcss />, desc: 'Création rapide d’interfaces élégantes avec Tailwind CSS.' },
+    { titre: 'Bootstrap', icon: <FaBootstrap />, desc: 'Utilisation de Bootstrap pour des designs adaptatifs et professionnels.' },
+    { titre: 'Javascript / React Native ( Base )', icon: <TbBrandReactNative />, desc: 'Bases pour créer des applications mobiles avec React Native.' },
+    { titre: 'Python / Tkinter ( base)', icon: <FaPython />, desc: 'Création d’interfaces graphiques simples avec Tkinter.' },
+    { titre: 'Git / GitHub', icon: [<BiGitBranch />, <AiFillGithub />], desc: 'Gestion de versions et collaboration via Git et GitHub.' },
+    { titre: 'SGBD / MySQL', icon: <SiMysql />, desc: 'Conception et gestion de bases de données MySQL.' },
+    { titre: 'Visual Studio Code', icon: <TbBrandVscode />, desc: 'Utilisation avancée de VS Code pour le développement.' },
+    { titre: 'Positif', icon: <AiFillCheckCircle />, desc: 'Attitude optimiste et orientée solutions.' },
+    { titre: 'Curieux', icon: <AiFillCheckCircle />, desc: 'Toujours en quête d’apprendre de nouvelles technologies.' },
+    { titre: 'Sociable', icon: <AiFillCheckCircle />, desc: 'Facilité à collaborer avec des équipes variées.' },
+    { titre: 'Rigoureux', icon: <AiFillCheckCircle />, desc: 'Respect strict des délais et des bonnes pratiques.' },
+    { titre: 'Esprit d\'équipe', icon: <AiFillCheckCircle />, desc: 'Capacité à travailler en synergie avec les autres.' },
+    { titre: 'Capacité d\'adaptation', icon: <AiFillCheckCircle />, desc: 'Aisance face aux changements et aux nouveaux défis.' },
+  ];
+
   return (
-    <div
-      className={`haha flex items-center justify-center w-full h-full text-sm text-white lg:h-screen lg:text-base ${NavBarOuvert ? 'blur-sm lg:blur-none' : '' } `}
-      id='Compétences'
-      title='Compétences ++'
-    >
-      <div className='flex flex-col w-full mx-2 mt-20 rounded-lg h-[60%] lg:mx-5 lg:flex-row lg:justify-between'>
-        {/* eto daolo ny compétences */}
-        <motion.div
-          className='w-full h-[100%] p-2 rounded-lg bg-stone-900 bg-opacity-90 lg:h-full lg:p-5 lg:mr-10 lg:w-1/2 lg:ml-36 border-b'
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <div className='p-3 text-xl font-bold text-center border-b'>
-            Compétences
-          </div>
+    <div className={`py-20 container selection:bg-stone-900 ${NavBarOuvert ? 'blur-sm lg:blur-none' : ''}`} id="Compétences">
 
-          <div className='grid h-[90%] mt-3 grid-cols-2 gap-3'>
-            <div className='w-full h-full p-3 border-b'>
-              <div className='p-2 text-center underline underline-offset-4'>
-                Développement web
-              </div>
-              <div className='mt-3'>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><FaReact className="mr-3 text-xl"/>Javascript / React JS</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><GrNode className="mr-3 text-xl" />Node JS / Express JS</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><TbBrandDjango className="mr-3 text-xl"/>Python / Django</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><FaLaravel className="mr-3 text-xl"/>PHP / Laravel ( Base )</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><ImHtmlFive className="mr-1 text-xl"/> / <FaCss3Alt className="ml-1 mr-3 text-xl"/>HTML / CSS</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><SiTailwindcss className="mr-3 text-xl"/>Tailwindcss</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><FaBootstrap className="mr-3 text-xl"/>Bootstrap</li>
-              </div>
-            </div>
-
-            <div className='w-full h-full p-3 border-b'>
-              <div className='p-2 text-center underline underline-offset-4'>
-                Développement logiciel
-              </div>
-              <div className='mt-3'>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'>
-                  <TbBrandReactNative className="mr-3 text-xl"/>Javascript / React native ( Base )
-                </li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><FaPython className="mr-3 text-xl"/>Python / Tkinter ( En cours )</li>
-              </div>
-            </div>
-
-            <div className='w-full h-full p-3'>
-              <div className='p-2 text-center underline underline-offset-4'>
-                Autres
-              </div>
-              <div className='mt-3'>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><DiGit className="mr-3 text-xl"/>Git / GitHub</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><GrMysql className="mr-3 text-xl"/>SGBD / Mysql</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><TbBrandOffice className="mr-3 text-xl"/>MS Office</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><TbBrandVscode className="mr-3 text-xl"/>VS Code</li>
-              </div>
-            </div>
-
-            <div className='w-full h-full p-3'>
-              <div className='p-2 text-center underline underline-offset-4'>
-                Soft skills
-              </div>
-              <div className='mt-3'>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Positif</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Rigoureux</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Esprit d'équipe</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Curieux</li>
-                <li className='flex items-center list-none cursor-pointer hover:text-gray-300'><AiTwotoneCheckCircle className="mr-3 text-xl"/>Capacité d'adaptation</li>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* eto le sary exp iny */}
-        <div className='flex justify-center w-full p-2 mt-10 text-center rounded-lg lg:mt-0 h-1/2 lg:h-full lg:p-5 lg:ml-10 lg:w-1/2 lg:scale-[0.9]'>
-          <motion.img
-            src={exp}
-            alt='exp'
-            initial={{ scale: 0, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, delay:0.5}}
-            className='rounded-lg'
-          >
-          </motion.img>
+      {/* Introduction */}
+      <div className="w-full h-[25vh] from-stone-950 via-stone-800 to-stone-800 bg-gradient-to-t mb-5 flex items-center justify-center flex-col text-white">
+        <h2 className="text-2xl font-bold">Mes Compétences</h2>
+        <div className="text-center max-w-2xl px-4">
+          Voici un aperçu de mes compétences techniques et qualités personnelles, acquises au fil de mes projets et expériences.
         </div>
       </div>
+
+      {/* Liste des compétences */}
+      <div className="h-full w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
+        {compts.map((compt, index) => (
+          <Parallax translateY={[0, -20]} className="w-full h-[25vh] lg:h-[23vh] bg-stone-800 transition-all duration-500 cursor-pointer group text-white relative hover:scale-105" key={index} title={compt.titre} >
+            <div className="w-full h-[30%] flex items-center border-b p-3 lg:p-5">
+              <span className="mr-3 text-lg font-bold items-center flex space-x-3 group-hover:animate-bounce">{compt.icon}</span>
+              <span className="text-xl font-bold">{compt.titre}</span>
+            </div>
+            <div className="w-full h-[70%] p-3 lg:p-5 flex items-center">
+              {compt.desc}
+            </div>
+            <span className="w-0 h-[1px] bg-white group-hover:w-full transition-all duration-500 absolute bottom-0"></span>
+            {[...Array(10)].map((_, i) => (
+              <span key={i} className={`bg-stone-900 w-[10%] h-0 -z-10 absolute group-hover:h-full ${i % 2 === 0 ? 'top-0' : 'bottom-0'} left-[${i * 10}%] transition-all duration-500`}></span>
+            ))}
+          </Parallax>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
-export default Competences;
