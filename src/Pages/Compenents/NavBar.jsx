@@ -64,7 +64,7 @@ function NavBar({ NavBarOuvert, setNavBarOuvert }) {
         animate={{ scale: 1, transition: { duration: 0.5, delay: 1 } }}
         whileTap={{ scale: 0.5 }}
       >
-        <Link to="Terminal">
+        <Link to="Kevin">
           <AiOutlineUser
             className="text-5xl text-white fas fa-user-graduate "
             title="Voir mon CV"

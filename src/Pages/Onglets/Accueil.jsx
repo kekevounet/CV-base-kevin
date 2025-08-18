@@ -8,6 +8,7 @@ import circuit from '../../Assets/circuit.png'
 import { ImSpinner } from 'react-icons/im';
 import Kevin2 from '../../Assets/circuit2.png';
 import { Parallax } from 'react-scroll-parallax';
+import { Link } from 'react-router-dom';
 function Accueil ({NavBarOuvert}) {
   // Etat
   const TextAcceuil = { scale: 0 }
@@ -73,16 +74,16 @@ function Accueil ({NavBarOuvert}) {
                 <i className='mr-5 fas fa-envelope'></i>
                 Contactez-moi
               </motion.a>
-              <motion.div
-                className='w-full lg:w-[40%] p-3 text-center border-b rounded-lg bg-stone-900 bg-opacity-90 hover:bg-stone-800'
-                whileTap={{ scale: 0.5 }}
+              <Link
+                className='w-full lg:w-[40%] p-3 text-center text-white no-underline border-b rounded-lg bg-stone-900 bg-opacity-90 hover:bg-stone-800'
                 title='Niavo Kevin'
+                to='/Kevin'
               >
                 <i className='mr-5 fas fa-address-card'></i>
-                <div onClick={()=>alert('Cette fonctionnalité ne fonctionne pas pour le moment')} className='w-full text-white no-underline'>
+                <span className='w-full text-white no-underline'>
                   Voir mon CV
-                </div>
-              </motion.div>
+                </span>
+              </Link>
             </div>
           </div>
         </motion.div>

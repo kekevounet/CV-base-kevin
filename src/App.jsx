@@ -31,8 +31,8 @@ function App(){
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Index />} />
-          <Route path='Kevin' element={<Kevin />} />
-          <Route path='Terminal' element={<Terminal /> } />
+          <Route path='/Kevin' element={<Kevin />} />
+          <Route path='/Terminal' element={<Terminal /> } />
         </Routes>
       </AnimatePresence>
     </>
